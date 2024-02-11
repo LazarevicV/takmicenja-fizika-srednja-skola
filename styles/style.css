@@ -28,13 +28,65 @@
     padding-right: 1em;
 }
 
-.header-image img {
-    width: 60%;
-    height: 20vh;
+/* @media only screen and (max-width: 765px) {
+    body {
+      background-color: lightblue;
+    }
+    .fix-width {
+        height: 100%;
+} */
+
+.justify-content-md-center a{
+    text-decoration: none;
+    border-radius: 60px; /* Zaobljava rubove linkova */ /* Dodaje malo prostora unutar linkova */
+    background-color: #f7f7f7; /* Postavlja pozadinsku boju */
+    color: blue; /* Postavlja boju teksta */
+    transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
+    padding: 1px 5px;
+
+    &:hover {
+        background-color: #ddd;
+        color: blueviolet;
+      }
 }
 
-@media only screen and (max-width: 765px) {
-    .header-image img {
-        width: 100%;
+.justify-content-md-center p{
+    padding: 1.5rem;
+}
+
+/* za Takmicenja, linkovi da budu vertikalni */
+.col ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stil za razmak između linkova na sekciji Takmicenja*/
+/* .col ul a{
+    margin-bottom: 10px;
+    text-decoration: none;
+    font: bold;
+} */
+
+.col ul a {
+    border-radius: 50px; /* Zaobljava rubove linkova */
+    padding: 10px 20px; /* Dodaje malo prostora unutar linkova */
+    background-color: #f7f7f7; /* Postavlja pozadinsku boju */
+    color: blue; /* Postavlja boju teksta */
+    transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
+    text-decoration: none;
+    
+    /* Dodaje efekat hover-a */
+    &:hover {
+      background-color: #ddd;
+      color: blueviolet;
     }
   }
+  
+
+.col h4{
+    padding: 0 0 1rem 0;
+}
