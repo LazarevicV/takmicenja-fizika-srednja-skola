@@ -56,11 +56,27 @@
 }
 
 /* Stil za razmak između linkova na sekciji Takmicenja*/
-.col ul a{
+/* .col ul a{
     margin-bottom: 10px;
     text-decoration: none;
     font: bold;
-}
+} */
+
+.col ul a {
+    border-radius: 50px; /* Zaobljava rubove linkova */
+    padding: 10px 20px; /* Dodaje malo prostora unutar linkova */
+    background-color: #f7f7f7; /* Postavlja pozadinsku boju */
+    color: #333; /* Postavlja boju teksta */
+    transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
+    text-decoration: none;
+    
+    /* Dodaje efekat hover-a */
+    &:hover {
+      background-color: #ddd;
+      color: #000;
+    }
+  }
+  
 
 .col h4{
     padding: 0 0 1rem 0;
