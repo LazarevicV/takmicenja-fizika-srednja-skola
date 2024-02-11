@@ -45,6 +45,16 @@
     padding: 1.5rem;
   }
 
-  .col a{
-    display: block;
-  }
+  .col ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stil za razmak između linkova */
+ .col ul a {
+        margin-bottom: 10px;
+}
