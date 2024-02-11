@@ -28,11 +28,13 @@
     padding-right: 1em;
 }
 
-/* @media only screen and (max-width: 765px) {
-    body {
-      background-color: lightblue;
+.header-image img {
+    width: 60%;
+    height: 20vh;
+}
+
+@media only screen and (max-width: 765px) {
+    .header-image img {
+        width: 100%;
     }
-    .fix-width {
-        height: 100%;
-    }
-  } */
+  }
