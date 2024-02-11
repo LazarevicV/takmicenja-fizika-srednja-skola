@@ -44,3 +44,7 @@
   .justify-content-md-center p{
     padding: 1.5rem;
   }
+
+  .col a{
+    display: block;
+  }
