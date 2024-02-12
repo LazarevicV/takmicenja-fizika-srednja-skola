@@ -1,0 +1,9 @@
+.header-image img {
+    width: 60%;
+}
+
+@media only screen and (max-width: 766px) {
+    .header-image img {
+        width: 100%;
+    }
+  }

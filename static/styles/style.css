@@ -90,3 +90,11 @@
 .col h4{
     padding: 0 0 1rem 0;
 }
+
+.added-padding-top {
+    padding-top: 3em;
+}
+
+.link-with-pdf-icon img {
+    width: 100%;
+}
