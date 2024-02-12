@@ -72,7 +72,7 @@
     font: bold;
 } */
 
-.col ul a {
+.col ul a{
     border-radius: 50px; /* Zaobljava rubove linkova */
     padding: 10px 20px; /* Dodaje malo prostora unutar linkova */
     background-color: #f7f7f7; /* Postavlja pozadinsku boju */
@@ -85,7 +85,7 @@
       background-color: #ddd;
       color: blueviolet;
     }
-  }
+}
   
 
 .col h4{
