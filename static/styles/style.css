@@ -144,18 +144,6 @@
     z-index: -1;
   }
   
-  .carousel-control-prev::before,
-  .carousel-control-next::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: -1;
-    color: white;
-  }
-  
   .carousel-control-prev::before {
     left: 10px;
   }
