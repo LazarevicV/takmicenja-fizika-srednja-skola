@@ -103,10 +103,10 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -115,23 +115,23 @@
     padding: 0;
     background: transparent;
     border: none;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
     background: none;
-}
-
-.carousel-control-prev {
+  }
+  
+  .carousel-control-prev {
     left: 30px;
-}
-
-.carousel-control-next {
+  }
+  
+  .carousel-control-next {
     right: 10px;
-}
-
-.carousel-control-prev::after,
-.carousel-control-next::after {
+  }
+  
+  .carousel-control-prev::after,
+  .carousel-control-next::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -142,24 +142,37 @@
     border-radius: 50%;
     background-color: black;
     z-index: -1;
-}
-
-.carousel-control-prev::before {
-    /* Postojeća pravila Bootstrap-a za ikonu strelice */
+  }
+  
+  .carousel-control-prev::before,
+  .carousel-control-next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: -1;
+    color: white;
+  }
+  
+  .carousel-control-prev::before {
     left: 10px;
-    /* Podešavate položaj */
-    color: white;
-    /* Definišete belu boju */
-}
-
-.carousel-control-next::before {
-    /* Postojeća pravila Bootstrap-a za ikonu strelice */
+  }
+  
+  .carousel-control-next::before {
     right: 10px;
-    /* Podešavate položaj */
-    color: white;
-    /* Definišete belu boju */
-}
-
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+  }
+  
+  .carousel {
+    height: 100vh;
+  }
+  
 
 .col h4 {
     padding: 0 0 1rem 0;
