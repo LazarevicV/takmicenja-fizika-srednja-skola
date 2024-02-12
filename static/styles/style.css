@@ -36,12 +36,17 @@
         height: 100%;
 } */
 
-.justify-content-md-center a{
+.justify-content-md-center a {
     text-decoration: none;
-    border-radius: 50px; /* Zaobljava rubove linkova */ /* Dodaje malo prostora unutar linkova */
-    background-color: transparent; /* Postavlja pozadinsku boju */
-    color: rgb(185, 132, 0); /* Postavlja boju teksta */
-    transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
+    border-radius: 50px;
+    /* Zaobljava rubove linkova */
+    /* Dodaje malo prostora unutar linkova */
+    background-color: transparent;
+    /* Postavlja pozadinsku boju */
+    color: rgb(185, 132, 0);
+    /* Postavlja boju teksta */
+    transition: all 0.2s ease-in-out;
+    /* Dodaje tranziciju za hover efekat */
     padding: 2px 10px;
 
     &:hover {
@@ -50,12 +55,12 @@
     }
 }
 
-.justify-content-md-center p{
+.justify-content-md-center p {
     padding: 1.5rem;
 }
 
 /* za Takmicenja, linkovi da budu vertikalni */
-.col ul{
+.col ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -71,18 +76,23 @@
     font: bold;
 } */
 
-.col ul a{
-    border-radius: 50px; /* Zaobljava rubove linkova */
-    padding: 10px 20px; /* Dodaje malo prostora unutar linkova */
-    background-color: transparent; /* Postavlja pozadinsku boju */
-    color: rgb(185, 132, 0); /* Postavlja boju teksta */
-    transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
+.col ul a {
+    border-radius: 50px;
+    /* Zaobljava rubove linkova */
+    padding: 10px 20px;
+    /* Dodaje malo prostora unutar linkova */
+    background-color: transparent;
+    /* Postavlja pozadinsku boju */
+    color: rgb(185, 132, 0);
+    /* Postavlja boju teksta */
+    transition: all 0.2s ease-in-out;
+    /* Dodaje tranziciju za hover efekat */
     text-decoration: none;
-    
+
     /* Dodaje efekat hover-a */
     &:hover {
-      background-color: palegoldenrod;
-      color: blue;
+        background-color: palegoldenrod;
+        color: blue;
     }
 }
 
@@ -93,10 +103,10 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
+}
+
+.carousel-control-prev,
+.carousel-control-next {
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -105,24 +115,53 @@
     padding: 0;
     background: transparent;
     border: none;
-  }
-  
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    background: none;
-  }
-  
-  .carousel-control-prev {
-    left: 10px;
-  }
-  
-  .carousel-control-next {
-    right: 10px;
-  }
-  
-  
+}
 
-.col h4{
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: none;
+}
+
+.carousel-control-prev {
+    left: 30px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev::after,
+.carousel-control-next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: -1;
+}
+
+.carousel-control-prev::before {
+    /* Postojeća pravila Bootstrap-a za ikonu strelice */
+    left: 10px;
+    /* Podešavate položaj */
+    color: white;
+    /* Definišete belu boju */
+}
+
+.carousel-control-next::before {
+    /* Postojeća pravila Bootstrap-a za ikonu strelice */
+    right: 10px;
+    /* Podešavate položaj */
+    color: white;
+    /* Definišete belu boju */
+}
+
+
+.col h4 {
     padding: 0 0 1rem 0;
 }
 
