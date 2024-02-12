@@ -34,7 +34,6 @@
     }
     .fix-width {
         height: 100%;
-    }
 } */
 
 .justify-content-md-center a{
@@ -90,4 +89,12 @@
 
 .col h4{
     padding: 0 0 1rem 0;
+}
+
+.added-padding-top {
+    padding-top: 3em;
+}
+
+.link-with-pdf-icon img {
+    width: 100%;
 }

@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{% block title %}Задаци{% endblock title %}
+{% block content %}
+
+<!-- tabela sa zadacima -->
+
+
+<div class="container added-padding-top">
+    <h2>Задаци са такмичења 2021.</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2">Задаци са ОПШТИНСКОГ такмичења одржаног 30.01.2021. године</th>
+                <th colspan="2">Задаци са ОКРУЖНОГ такмичења одржаног 20.02.2021. године</th>
+                <th>Задаци са Државног такмичења одржаног 23.04.2021. године</th>
+                <th>Задаци са СФО</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I разред Алфа категорија</td>
+                <td>
+                    <a class="link-with-pdf-icon"
+                        href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko2021/IOp2021Alfa.pdf">
+                        <img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt="">
+                    </a>
+                </td>
+                <td>
+                    I разред Алфа категорија
+                </td>
+                <td>
+                    <a class="link-with-pdf-icon"
+                        href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Okruzno2021/IOk2021Alfa.pdf">
+                        <img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt="">
+                    </a>
+                </td>
+                <td>
+                    <a
+                        href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Drzavno2021/Zadaci/I%20DRZAVNO%20ALFA%20KATEGORIJA%202021.pdf">I
+                        DRZAVNO ALFA KATEGORIJA 2021</a>
+                </td>
+                <td>
+                    <a
+                        href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/SFO%202021/Zadaci/ZADATAK%201%20-%20RESENJE%20SFO%202021.pdf">ZADATAK
+                        1 - RESENJE SFO 2021</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    I разред Бета категорија
+                </td>
+                <td>
+                    <a class="link-with-pdf-icon"
+                        href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Okruzno2021/IOk2021Alfa.pdf">
+                        <img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt="">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- tabela sa zadacima -->
+{% endblock content %}
