@@ -40,14 +40,14 @@
     text-decoration: none;
     border-radius: 50px; /* Zaobljava rubove linkova */ /* Dodaje malo prostora unutar linkova */
     background-color: transparent; /* Postavlja pozadinsku boju */
-    color: blue; /* Postavlja boju teksta */
+    color: rgb(185, 132, 0); /* Postavlja boju teksta */
     transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
     padding: 2px 10px;
 
     &:hover {
-        background-color: burlywood;
+        background-color: palegoldenrod;
         color: blue;
-      }
+    }
 }
 
 .justify-content-md-center p{
@@ -75,13 +75,13 @@
     border-radius: 50px; /* Zaobljava rubove linkova */
     padding: 10px 20px; /* Dodaje malo prostora unutar linkova */
     background-color: transparent; /* Postavlja pozadinsku boju */
-    color: blue; /* Postavlja boju teksta */
+    color: rgb(185, 132, 0); /* Postavlja boju teksta */
     transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
     text-decoration: none;
     
     /* Dodaje efekat hover-a */
     &:hover {
-      background-color: burlywood;
+      background-color: palegoldenrod;
       color: blue;
     }
 }
