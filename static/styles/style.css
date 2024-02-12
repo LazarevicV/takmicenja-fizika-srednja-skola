@@ -38,15 +38,15 @@
 
 .justify-content-md-center a{
     text-decoration: none;
-    border-radius: 60px; /* Zaobljava rubove linkova */ /* Dodaje malo prostora unutar linkova */
-    background-color: #f7f7f7; /* Postavlja pozadinsku boju */
+    border-radius: 50px; /* Zaobljava rubove linkova */ /* Dodaje malo prostora unutar linkova */
+    background-color: transparent; /* Postavlja pozadinsku boju */
     color: blue; /* Postavlja boju teksta */
     transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
-    padding: 1px 5px;
+    padding: 2px 10px;
 
     &:hover {
-        background-color: #ddd;
-        color: blueviolet;
+        background-color: burlywood;
+        color: blue;
       }
 }
 
@@ -74,15 +74,15 @@
 .col ul a{
     border-radius: 50px; /* Zaobljava rubove linkova */
     padding: 10px 20px; /* Dodaje malo prostora unutar linkova */
-    background-color: #f7f7f7; /* Postavlja pozadinsku boju */
+    background-color: transparent; /* Postavlja pozadinsku boju */
     color: blue; /* Postavlja boju teksta */
     transition: all 0.2s ease-in-out; /* Dodaje tranziciju za hover efekat */
     text-decoration: none;
     
     /* Dodaje efekat hover-a */
     &:hover {
-      background-color: #ddd;
-      color: blueviolet;
+      background-color: burlywood;
+      color: blue;
     }
 }
   
