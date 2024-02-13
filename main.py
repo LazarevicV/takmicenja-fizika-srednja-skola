@@ -10,5 +10,8 @@ def index():
 def zadaci():
     return render_template('zadaci.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/kontakt')
+def kontakt():
+    return render_template('kontakt.html')
+
+app.run(debug=True)
