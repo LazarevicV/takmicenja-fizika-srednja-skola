@@ -7,10 +7,8 @@
     height: 50px;
 }
 
-.table tbody tr th {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.display-for-mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 766px) {
@@ -22,28 +20,22 @@
 
 /* Responsive styles for mobile screens */
 @media (max-width: 767px) {
-    .table thead {
-        display: none; /* Hide the table header on small screens */
-    }
-
-    .table, .table tbody, .table tr, .table td {
+    .display-for-mobile {
         display: block;
-        width: 100%;
     }
 
-    .table td {
-        text-align: left;
-        margin-bottom: 8px;
+    .display-for-bigger-screen {
+        display: none;
+        border: red;
     }
 
-    .link-with-pdf-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .link-with-pdf-icon img {
+        width: 40px;
+        height: 40px;
     }
 
-    .center-text-td tbody tr td {
-        text-align: center;
-        font-weight: bold;
+    .add-margin-border-top {
+        border-top: 2px solid black;
+        padding-top: 5em;
     }
 }
