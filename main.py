@@ -10,4 +10,8 @@ def index():
 def zadaci():
     return render_template('zadaci.html')
 
+@app.route('/kontakt')
+def kontakt():
+    return render_template('kontakt.html')
+
 app.run(debug=True)
