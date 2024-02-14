@@ -161,6 +161,17 @@
   height: 100vh;
 }
 
+@media (max-width: 767px) {
+  .no-wrap {
+      display: flex;
+      align-items: center;
+  }
+  
+  .no-wrap img {
+      margin-left: 5px; /* Prilagodite prema potrebi */
+  }
+}
+
 
 .col h4 {
   padding: 0 0 1rem 0;
