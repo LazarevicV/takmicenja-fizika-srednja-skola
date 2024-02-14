@@ -11,9 +11,33 @@
     display: none;
 }
 
+.fix-ipho-header-image img {
+    width: 100%;
+}
+
+.fix-ipho-header-text {
+    padding-top: 5em;
+}
+
+.custom-table th {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .custom-table th img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
 @media only screen and (max-width: 766px) {
     .header-image img {
         width: 100%;
+    }
+    .custom-table tbody tr th img {
+        width: 100px;
+        height: 150px;
     }
   }
 

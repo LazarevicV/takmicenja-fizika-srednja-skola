@@ -22,4 +22,8 @@ def opste_informacije():
 def sfo():
     return render_template('sfo.html')
 
+@app.route('/ipho')
+def ipho():
+    return render_template('ipho.html')
+
 app.run(debug=True)
