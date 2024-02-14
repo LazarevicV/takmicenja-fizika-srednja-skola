@@ -18,4 +18,8 @@ def kontakt():
 def opste_informacije():
     return render_template('opste_informacije.html')
 
+@app.route('/sfo')
+def sfo():
+    return render_template('sfo.html')
+
 app.run(debug=True)
