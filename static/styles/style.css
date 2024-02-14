@@ -170,6 +170,15 @@
   .no-wrap img {
       margin-left: 5px; /* Prilagodite prema potrebi */
   }
+
+  .map-container {
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
 }
 
 
