@@ -14,7 +14,7 @@ def zadaci():
 def kontakt():
     return render_template('kontakt.html')
 
-@app.route('/opste-informacije')
+@app.route('/opste_informacije')
 def opste_informacije():
     return render_template('opste_informacije.html')
 
