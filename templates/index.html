@@ -55,14 +55,14 @@
                 <table class="table table-hover table-bordered table-responsive">
                     <tbody>
                         <tr>
-                            <td> <b>Правилник такмичења</b> </td>
+                            <td class="align-middle"> <b>Правилник такмичења</b> </td>
                             <td><a class="link-with-pdf-icon"
                                     href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Pravilnik_o_takmicenjima_iz_fizike_ucenika_srednjih_skola.pdf"><img
                                         src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
                             </td>
                         </tr>
                         <tr>
-                            <td> <b>Календар такмичења 2022</b> </td>
+                            <td class="align-middle"> <b>Календар такмичења 2022</b> </td>
                             <td>
                                 <a class="link-with-pdf-icon"
                                     href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Kalendar_takmicenja_2022.pdf"><img
@@ -70,7 +70,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td> <b>Наставни програм такмичења Алфа и Бета категорије</b> </td>
+                            <td class="align-middle"> <b>Наставни програм такмичења Алфа и Бета категорије</b> </td>
                             <td>
                                 <a class="link-with-pdf-icon"
                                     href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/PlanTakmicenja2021.pdf"><img
@@ -78,7 +78,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td> <b>Наставни програм такмичења Гама категорије</b> </td>
+                            <td class="align-middle"> <b>Наставни програм такмичења Гама категорије</b> </td>
                             <td>
                                 <a class="link-with-pdf-icon"
                                     href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Program_Gama_2020.pdf"><img
@@ -86,7 +86,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td> <b>ИЗЈАВА - лични подаци</b> </td>
+                            <td class="align-middle"> <b>ИЗЈАВА - лични подаци</b> </td>
                             <td>
                                 <a class="link-with-pdf-icon"
                                     href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Izjava.pdf"><img
@@ -94,7 +94,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td> <b>Извештај са такмичења</b> </td>
+                            <td class="align-middle"> <b>Извештај са такмичења</b> </td>
                             <td>
                                 <a class="link-with-pdf-icon"
                                     href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Izvestaj-sa-takmicenja.xls"><img
@@ -118,63 +118,74 @@
         <!-- Najnovije -->
 
         <!-- Carousel -->
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
-            style="font-size: larger; font-style: bold;">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
+        <div class="container">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"
+                style="font-size: larger; font-style: bold;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/static/images/najnovije/IMG_20230718_181411.jpg"
+                            class="d-block w-100 img-fluid mx-auto" alt="">
+                        <div class="carousel-caption carousel-caption-bottom">
+                            <h5>IPhO 2024 Tokio Japan</h5>
+                            <p>Сви наши такмичари су освојили по бронзану медаљу на светској Олимпијади из физике IPhO
+                                2024, која је одржана у Токију у Јапану од 10-17. јула 2023. године.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/static/images/najnovije/Tim Srbije.png" class="d-block img-fluid w-60 mx-auto"
+                            alt="" id="imgbr2">
+                        <div class="carousel-caption carousel-caption-bottom">
+                            <h5>У екипи Србије су учествовали:</h5>
+                            <p>Тадија Јелесијевић, Тадеј Ристић, Вук Хип, Сава Тодоровић и Ђорђе Паројчић.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/static/images/najnovije/IMG_20230718_122238.jpg" class="d-block w-100 mx-auto" alt=""
+                            class="img-fluid">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/static/images/najnovije/IMG_20230718_181027.jpg" class="d-block w-100 mx-auto" alt=""
+                            class="img-fluid">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/static/images/najnovije/IMG_20230718_181411.jpg" class="d-block w-100 img-fluid mx-auto"
-                        alt="">
-                    <div class="carousel-caption carousel-caption-bottom">
-                        <h5>IPhO 2024 Tokio Japan</h5>
-                        <p>Сви наши такмичари су освојили по бронзану медаљу на светској Олимпијади из физике IPhO
-                            2024, која је одржана у Токију у Јапану од 10-17. јула 2023. године.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/static/images/najnovije/Tim Srbije.png" class="d-block img-fluid w-60 mx-auto" alt="">
-                    <div class="carousel-caption carousel-caption-bottom">
-                        <h5>У екипи Србије су учествовали:</h5>
-                        <p>Тадија Јелесијевић, Тадеј Ристић, Вук Хип, Сава Тодоровић и Ђорђе Паројчић.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/static/images/najnovije/IMG_20230718_122238.jpg" class="d-block w-100 mx-auto" alt=""
-                        class="img-fluid">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/static/images/najnovije/IMG_20230718_181027.jpg" class="d-block w-100 mx-auto" alt=""
-                        class="img-fluid">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
         <!-- Carousel -->
 
         <!-- Najnovije -->
-        <div class="row" style="padding: 3rem;">
-            <div class="col text-center">
-                <h4>Резултати Општинског такмичења
+        <div class="row" style="padding: 1rem;">
+            <div class="col" style="text-align: left;">
+                <h4 class="text-center">Општинско такмичење
+                    14.02.2024.</h4>
+                <p> Списак позваних ученика на Окружно такмичење се налази на страници <a href="/okruzno">ОКРУЖНО.</a>
+                </p>
+            </div>
+            <div class="col" style="text-align: left;">
+                <h4 class="text-center">Резултати Општинског такмичења
                     (07.02.2024.)</h4>
                 <p>Статистика резултата са општинског такмичења показују да су задаци били претешки за ученике
                     (видети на страници Општинско). Зато молимо све Окружне комисије да спусте границе пролаза на
@@ -185,65 +196,56 @@
                     се налазе у Табели на мејл takmicenje@df.uns.ac.rs (уколико је школа домаћин био организатор и
                     Општинског, довољно је пријавити само име школе и града).</p>
             </div>
-            <div class="col text-center">
-                <h4>Општинско такмичење
+            <div class="col" style="text-align: left;">
+                <h4 class="text-center">Општинско такмичење
                     04.02.2024.</h4>
                 <p>Задаци и решења са Општинског такмичења се налазе на страници ОПШТИНСКО
                     Молбе за позивање на Окружно такмичење (молба) по члану 33. се шаљу до 13.02.2024. електронски
                     (скенирана или усликана потписана молба), на мејл takmicenje@df.uns.ac.rs</p>
             </div>
-            <div class="col text-center">
-                <h4>Општинско такмичење
-                    24.01.2024.</h4>
-                <p>Сви ученици који желе да учествују на такмичењима, пре почетка Општинског такмичења лично, или
-                    родитељи за малолетне ученике, морају потписати Изјаву о сагласности за јавно објављивање
-                    података, неопходних за регуларно одржавање такмичења. Изјава се чува у школској документацији
-                    школе коју ученик похађа. </p>
-                <p>Обавештење Организаторима. Задаци се шаљу на мејл адресе из Табеле пријављених Организатора два
-                    сата пре почетка такмичења.</p>
-                <p>Табеле за слање извештаја са Општинског нивоа за Алфа/Бета и Гама категорију. </p>
-            </div>
         </div>
         <!-- Najnovije -->
 
-        <!-- Takmicenja -->
-        <div class="row justify-content-md-center text-center" style="padding: 2rem;">
-            <div class="col-sm-4">
-                <h1>Задаци и решења</h1>
-            </div>
-        </div>
         <div class="container">
-            <div class="row" id="main_linkovi_pillshaped">
-                <div class="col text-center">
-                    <h4>Такмичење 2023</h4>
-                    <ul>
-                        <a href="">Општинско такмичење</a>
-                        <a href="">Окружно такмичење</a>
-                        <a href="">Републичко такмичење</a>
-                        <a href="">Српсkа физичка олимпијада</a>
-                    </ul>
-                </div>
-                <div class="col text-center">
-                    <h4>Такмичење 2022</h4>
-                    <ul>
-                        <a href="">Општинско такмичење</a>
-                        <a href="">Окружно такмичење</a>
-                        <a href="">Републичко такмичење</a>
-                        <a href="">Српсkа физичка олимпијада</a>
-                    </ul>
-                </div>
-                <div class="col text-center">
-                    <h4>Такмичење 2021</h4>
-                    <ul>
-                        <a href="">Општинско такмичење</a>
-                        <a href="">Окружно такмичење</a>
-                        <a href="">Републичко такмичење</a>
-                        <a href="">Српсkа физичка олимпијада</a>
-                    </ul>
+            <!-- Takmicenja -->
+            <div class="row justify-content-md-center text-center" style="padding: 2rem;">
+                <div class="col-sm-4">
+                    <h1>Задаци и решења</h1>
                 </div>
             </div>
+            <div class="container">
+                <div class="row" id="main_linkovi_pillshaped2">
+                    <div class="col text-center">
+                        <h4>Такмичење 2023</h4>
+                        <ul>
+                            <a href="">Општинско такмичење</a>
+                            <a href="">Окружно такмичење</a>
+                            <a href="">Републичко такмичење</a>
+                            <a href="">Српсkа физичка олимпијада</a>
+                        </ul>
+                    </div>
+                    <div class="col text-center">
+                        <h4>Такмичење 2022</h4>
+                        <ul>
+                            <a href="">Општинско такмичење</a>
+                            <a href="">Окружно такмичење</a>
+                            <a href="">Републичко такмичење</a>
+                            <a href="">Српсkа физичка олимпијада</a>
+                        </ul>
+                    </div>
+                    <div class="col text-center">
+                        <h4>Такмичење 2021</h4>
+                        <ul>
+                            <a href="">Општинско такмичење</a>
+                            <a href="">Окружно такмичење</a>
+                            <a href="">Републичко такмичење</a>
+                            <a href="">Српсkа физичка олимпијада</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Takmicenja -->
         </div>
-        <!-- Takmicenja -->
 
         <!-- Pravlinici o takmicenja -->
         <div class="row justify-content-md-center text-center" style="padding: 3rem 0 1rem 0;">
@@ -288,10 +290,14 @@
                 <div class="col-md-8" id="sfo1">
                     <img src="/static/images/najnovije/MIR_8135.jpg" alt="" class="img-fluid" width="100%">
                 </div>
-                <div class="col-md-4 d-flex flex-column" style="align-items: center; justify-content: center;" id="sfo2">
-                    <h5>Коначни резултати за Алфа, Бета и Гама категорију су објављени на страници Државно.</h5>
-                    <h5>Списак позваних ученика и информације о одржавању СФО се налаза на страници СФО.</h5>
-                    <h5>На републичком семинару ће се моћи преузети дипломе са Државног такмичења.</h5>
+                <div class="col-md-4 d-flex flex-column" style="align-items: center; justify-content: center;"
+                    id="sfo2">
+                    <h5 style="margin-bottom: 1.5rem;">Коначни резултати за Алфа, Бета и Гама категорију су објављени на
+                        страници Државно.</h5>
+                    <h5 style="margin-bottom: 1.5rem;">Списак позваних ученика и информације о одржавању СФО се налаза
+                        на страници СФО.</h5>
+                    <h5 style="margin-bottom: 1.5rem;">На републичком семинару ће се моћи преузети дипломе са Државног
+                        такмичења.</h5>
                 </div>
             </div>
         </div>

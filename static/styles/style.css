@@ -60,6 +60,26 @@
   }
 }
 
+#main_linkovi_pillshaped2 a{
+  text-decoration: none;
+  border-radius: 50px;
+  /* Zaobljava rubove linkova */
+  /* Dodaje malo prostora unutar linkova */
+  background-color: transparent;
+  /* Postavlja pozadinsku boju */
+  color: rgb(185, 132, 0);
+  /* Postavlja boju teksta */
+  transition: all 0.2s ease-in-out;
+  /* Dodaje tranziciju za hover efekat */
+  padding: 5px 10px;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: palegoldenrod;
+    color: blue;
+  }
+}
+
 .justify-content-md-center p {
   padding: 1.5rem;
 }
@@ -173,7 +193,7 @@
 
   .carousel-control-prev,
   .carousel-control-next {
-    bottom: 50%;
+    bottom: 10%;
     /* Promenjeno sa 'bottom: 0' na 'bottom: 10%' */
   }
 
@@ -184,6 +204,14 @@
     /* Smanjuje padding */
     background-color: rgba(0, 0, 0, 0.5);
     /* Povećava transparentnost pozadine */
+  }
+
+  .carousel {
+    height: 45vh;
+  }
+
+  #imgbr2{
+    height: 300px;
   }
 
   #sfo2{
