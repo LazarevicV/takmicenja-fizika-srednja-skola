@@ -40,7 +40,7 @@
         height: 100%;
 } */
 
-.justify-content-md-center a {
+#main_linkovi_pillshaped a{
   text-decoration: none;
   border-radius: 50px;
   /* Zaobljava rubove linkova */
@@ -52,6 +52,7 @@
   transition: all 0.2s ease-in-out;
   /* Dodaje tranziciju za hover efekat */
   padding: 2px 10px;
+  margin-bottom: 10px;
 
   &:hover {
     background-color: palegoldenrod;
@@ -79,26 +80,6 @@
     text-decoration: none;
     font: bold;
 } */
-
-.col ul a {
-  border-radius: 50px;
-  /* Zaobljava rubove linkova */
-  padding: 10px 20px;
-  /* Dodaje malo prostora unutar linkova */
-  background-color: transparent;
-  /* Postavlja pozadinsku boju */
-  color: rgb(185, 132, 0);
-  /* Postavlja boju teksta */
-  transition: all 0.2s ease-in-out;
-  /* Dodaje tranziciju za hover efekat */
-  text-decoration: none;
-
-  /* Dodaje efekat hover-a */
-  &:hover {
-    background-color: palegoldenrod;
-    color: blue;
-  }
-}
 
 .carousel-caption-bottom {
   position: absolute;
@@ -203,6 +184,10 @@
     /* Smanjuje padding */
     background-color: rgba(0, 0, 0, 0.5);
     /* Povećava transparentnost pozadine */
+  }
+
+  #sfo2{
+    padding: 2rem;
   }
 }
 
