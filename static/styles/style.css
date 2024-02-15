@@ -197,9 +197,12 @@
   }
 
   .carousel-caption-bottom {
-    font-size: 0.8rem; /* Smanjuje veličinu fonta */
-    padding: 0.1rem; /* Smanjuje padding */
-    background-color: rgba(0, 0, 0, 0.5); /* Povećava transparentnost pozadine */
+    font-size: 0.8rem;
+    /* Smanjuje veličinu fonta */
+    padding: 0.1rem;
+    /* Smanjuje padding */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Povećava transparentnost pozadine */
   }
 }
 
@@ -208,23 +211,16 @@
   bottom: 20px;
   right: 20px;
   display: none;
-}
-
-/* Dodati stilovi za tamni režim */
-.btn-dark {
-    background-color: black; /* ili bilo koja tamna boja koju preferirate */
+  box-shadow: 0 0 0 1px white;
 }
 
 .fa-arrow-up.text-white {
-    color: white;
+  color: white;
 }
 
-/* Dodato pravilo za okruglo dugme */
 .rounded-circle {
-    border-radius: 100%;
+  border-radius: 50%;
 }
-
-
 
 .col h4 {
   padding: 0 0 1rem 0;
