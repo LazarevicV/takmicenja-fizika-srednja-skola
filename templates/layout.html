@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>{% block title %} {% endblock title%}</title>
 </head>
 
@@ -54,6 +55,13 @@
 
     {% block content %} {% endblock content %}
 
+    <!-- Dugme za povratak na vrh -->
+    <button type="button" class="btn btn-floating bg-dark rounded-circle" id="btn-back-to-top">
+        <i class="fa fa-arrow-up text-white">
+            <span class="arrow-inner"></span>
+        </i>
+    </button>
+
     <!-- footer -->
     <footer class="py-3 mt-5 bg-dark text-white">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -64,7 +72,8 @@
             <li class="nav-item"><a href="/sfo" class="nav-link px-2 text-white">СФО</a></li>
             <li class="nav-item"><a href="/ipho" class="nav-link px-2 text-white">IPhO</a></li>
             <li class="nav-item"><a href="/zadaci" class="nav-link px-2 text-white">Задаци</a></li>
-            <li class="nav-item"><a href="/opste_informacije" class="nav-link px-2 text-white">Опште информације</a></li>
+            <li class="nav-item"><a href="/opste_informacije" class="nav-link px-2 text-white">Опште информације</a>
+            </li>
             <li class="nav-item"><a href="/kontakt" class="nav-link px-2 text-white">Контакт</a></li>
         </ul>
         <p class="text-center text-white">Такмичења из физике ученика средњих школа.</p>
@@ -114,6 +123,31 @@
         </p>
     </footer>
     <!-- footer -->
+
+    <script>
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 120 ||
+                document.documentElement.scrollTop > 120
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
