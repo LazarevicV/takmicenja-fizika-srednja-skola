@@ -40,7 +40,7 @@
         height: 100%;
 } */
 
-#main_linkovi_pillshaped a{
+#main_linkovi_pillshaped a {
   text-decoration: none;
   border-radius: 50px;
   /* Zaobljava rubove linkova */
@@ -60,17 +60,12 @@
   }
 }
 
-#main_linkovi_pillshaped2 a{
+#main_linkovi_pillshaped2 a {
   text-decoration: none;
   border-radius: 50px;
-  /* Zaobljava rubove linkova */
-  /* Dodaje malo prostora unutar linkova */
   background-color: transparent;
-  /* Postavlja pozadinsku boju */
   color: rgb(185, 132, 0);
-  /* Postavlja boju teksta */
   transition: all 0.2s ease-in-out;
-  /* Dodaje tranziciju za hover efekat */
   padding: 5px 10px;
   margin-bottom: 10px;
 
@@ -85,7 +80,7 @@
 }
 
 /* za Takmicenja, linkovi da budu vertikalni */
-.col ul {
+#takmicenja ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -166,6 +161,42 @@
   height: 100vh;
 }
 
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  box-shadow: 0 0 0 1px white;
+
+  &:hover{
+    box-shadow: 0 0 8px 1px white;
+  }
+}
+
+.fa-arrow-up.text-white {
+  color: white;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.col h4 {
+  padding: 0 0 1rem 0;
+}
+
+.added-padding-top {
+  padding-top: 3em;
+}
+
+.link-with-pdf-icon {
+  width: 100%;
+}
+
+.link-with-pdf-icon img {
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   .no-wrap {
     display: flex;
@@ -210,43 +241,11 @@
     height: 45vh;
   }
 
-  #imgbr2{
+  #imgbr2 {
     height: 300px;
   }
 
-  #sfo2{
+  #sfo2 {
     padding: 2rem;
   }
-}
-
-#btn-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  box-shadow: 0 0 0 1px white;
-}
-
-.fa-arrow-up.text-white {
-  color: white;
-}
-
-.rounded-circle {
-  border-radius: 50%;
-}
-
-.col h4 {
-  padding: 0 0 1rem 0;
-}
-
-.added-padding-top {
-  padding-top: 3em;
-}
-
-.link-with-pdf-icon {
-  width: 100%;
-}
-
-.link-with-pdf-icon img {
-  width: 100%;
 }
