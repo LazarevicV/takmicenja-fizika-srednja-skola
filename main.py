@@ -22,4 +22,8 @@ def opste_informacije():
 def sfo():
     return render_template('sfo.html')
 
+@app.route('/opstinsko')
+def opstinsko():
+    return render_template('opstinsko.html')
+
 app.run(debug=True)
