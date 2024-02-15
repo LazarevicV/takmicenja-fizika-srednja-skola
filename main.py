@@ -26,4 +26,8 @@ def sfo():
 def opstinsko():
     return render_template('opstinsko.html')
 
+@app.route('/drzavno')
+def drzavno():
+    return render_template('drzavno.html')
+
 app.run(debug=True)
