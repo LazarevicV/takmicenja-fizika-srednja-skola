@@ -201,6 +201,11 @@
   text-shadow: 0 0 1px white; /* Adjust the shadow properties as needed */
 }
 
+.table-responsive p {
+  font-size: 16px; /* Podesite veličinu fonta prema potrebi */
+  margin-bottom: 10px; /* Podesite razmak između linkova prema potrebi */
+}
+
 @media (max-width: 767px) {
   .no-wrap {
     display: flex;
@@ -252,4 +257,8 @@
   #sfo2 {
     padding: 2rem;
   }
+
+  .table-responsive p {
+    font-size: 14px; /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
+}
 }

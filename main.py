@@ -34,4 +34,8 @@ def drzavno():
 def ipho():
     return render_template('ipho.html')
 
+@app.route('/vesti')
+def vesti():
+    return render_template('vesti.html')
+
 app.run(debug=True)
