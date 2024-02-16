@@ -80,11 +80,8 @@
         display: block;
     }
 
-    .contestants-images {
-        /* width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center; */
+    .center-text-smaller-screen {
+        text-align: center;
     }
 
     .contestants-images img{
