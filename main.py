@@ -38,4 +38,8 @@ def ipho():
 def vesti():
     return render_template('vesti.html')
 
+@app.route('/okruzno')
+def okruzno():
+    return render_template('okruzno.html')
+
 app.run(debug=True)
