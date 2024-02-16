@@ -28,7 +28,7 @@
   padding-right: 1em;
 }
 
-.navbar li a{
+.navbar li a {
   color: white;
 }
 
@@ -40,7 +40,7 @@
         height: 100%;
 } */
 
-.justify-content-md-center a {
+#main_linkovi_pillshaped a {
   text-decoration: none;
   border-radius: 50px;
   /* Zaobljava rubove linkova */
@@ -52,6 +52,22 @@
   transition: all 0.2s ease-in-out;
   /* Dodaje tranziciju za hover efekat */
   padding: 2px 10px;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: palegoldenrod;
+    color: blue;
+  }
+}
+
+#main_linkovi_pillshaped2 a {
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: transparent;
+  color: rgb(185, 132, 0);
+  transition: all 0.2s ease-in-out;
+  padding: 5px 10px;
+  margin-bottom: 10px;
 
   &:hover {
     background-color: palegoldenrod;
@@ -64,7 +80,7 @@
 }
 
 /* za Takmicenja, linkovi da budu vertikalni */
-.col ul {
+#takmicenja ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -80,26 +96,6 @@
     font: bold;
 } */
 
-.col ul a {
-  border-radius: 50px;
-  /* Zaobljava rubove linkova */
-  padding: 10px 20px;
-  /* Dodaje malo prostora unutar linkova */
-  background-color: transparent;
-  /* Postavlja pozadinsku boju */
-  color: rgb(185, 132, 0);
-  /* Postavlja boju teksta */
-  transition: all 0.2s ease-in-out;
-  /* Dodaje tranziciju za hover efekat */
-  text-decoration: none;
-
-  /* Dodaje efekat hover-a */
-  &:hover {
-    background-color: palegoldenrod;
-    color: blue;
-  }
-}
-
 .carousel-caption-bottom {
   position: absolute;
   bottom: 0;
@@ -112,7 +108,7 @@
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   z-index: 10;
   width: auto;
   height: auto;
@@ -157,7 +153,7 @@
 }
 
 .carousel-item img {
-  object-fit: cover;
+  object-fit: contain;
   height: 100vh;
 }
 
@@ -165,26 +161,25 @@
   height: 100vh;
 }
 
-@media (max-width: 767px) {
-  .no-wrap {
-      display: flex;
-      align-items: center;
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  box-shadow: 0 0 0 1px white;
+
+  &:hover{
+    box-shadow: 0 0 8px 1px white;
   }
-  
-  .no-wrap img {
-      margin-left: 5px; /* Prilagodite prema potrebi */
-  }
-
-  .map-container {
-    width: 100%;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-}
+.fa-arrow-up.text-white {
+  color: white;
 }
 
+.rounded-circle {
+  border-radius: 50%;
+}
 
 .col h4 {
   padding: 0 0 1rem 0;
@@ -200,4 +195,57 @@
 
 .link-with-pdf-icon img {
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .no-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .no-wrap img {
+    margin-left: 5px;
+    /* Prilagodite prema potrebi */
+  }
+
+  .map-container {
+    width: 100%;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    bottom: 10%;
+    /* Promenjeno sa 'bottom: 0' na 'bottom: 10%' */
+  }
+
+  .carousel-caption-bottom {
+    font-size: 0.8rem;
+    /* Smanjuje veličinu fonta */
+    padding: 0.1rem;
+    /* Smanjuje padding */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Povećava transparentnost pozadine */
+  }
+
+  .carousel {
+    height: 45vh;
+  }
+
+  #imgbr2 {
+    height: 300px;
+  }
+
+  #sfo2 {
+    padding: 2rem;
+  }
 }
