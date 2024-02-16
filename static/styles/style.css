@@ -43,14 +43,9 @@
 #main_linkovi_pillshaped a {
   text-decoration: none;
   border-radius: 50px;
-  /* Zaobljava rubove linkova */
-  /* Dodaje malo prostora unutar linkova */
   background-color: transparent;
-  /* Postavlja pozadinsku boju */
   color: rgb(185, 132, 0);
-  /* Postavlja boju teksta */
   transition: all 0.2s ease-in-out;
-  /* Dodaje tranziciju za hover efekat */
   padding: 2px 10px;
   margin-bottom: 10px;
 
