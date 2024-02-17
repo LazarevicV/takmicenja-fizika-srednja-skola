@@ -164,8 +164,8 @@
   transition: box-shadow 0.1s ease;
   box-shadow: 0 0 0 1px white;
 
-  &:hover{
-    box-shadow: 0 0 8px 1px white;
+  &:hover {
+    box-shadow: 0 0 8px 2px white;
   }
 }
 
@@ -198,12 +198,15 @@
 }
 
 #footer a:hover {
-  text-shadow: 0 0 1px white; /* Adjust the shadow properties as needed */
+  text-shadow: 0 0 2px white;
+  /* Adjust the shadow properties as needed */
 }
 
 .table-responsive p {
-  font-size: 16px; /* Podesite veličinu fonta prema potrebi */
-  margin-bottom: 10px; /* Podesite razmak između linkova prema potrebi */
+  font-size: 16px;
+  /* Podesite veličinu fonta prema potrebi */
+  margin-bottom: 10px;
+  /* Podesite razmak između linkova prema potrebi */
 }
 
 @media (max-width: 767px) {
@@ -238,7 +241,7 @@
   }
 
   .carousel-caption-bottom {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     /* Smanjuje veličinu fonta */
     padding: 0.1rem;
     /* Smanjuje padding */
@@ -247,7 +250,7 @@
   }
 
   .carousel {
-    height: 45vh;
+    height: 47vh;
   }
 
   #imgbr2 {
@@ -259,6 +262,7 @@
   }
 
   .table-responsive p {
-    font-size: 14px; /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
-}
+    font-size: 14px;
+    /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
+  }
 }
