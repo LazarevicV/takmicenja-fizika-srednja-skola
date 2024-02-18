@@ -209,6 +209,13 @@
   /* Podesite razmak između linkova prema potrebi */
 }
 
+.nav-link.active {
+  color: #fff;/* Postavite boju teksta prema potrebi */
+  font-weight: bold; /* Dodajte druge stilove prema potrebi */
+  text-shadow: 0 0 5px lightblue;
+}
+
+
 @media (max-width: 767px) {
   .no-wrap {
     display: flex;
