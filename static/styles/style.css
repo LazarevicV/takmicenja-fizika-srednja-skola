@@ -215,6 +215,9 @@
   text-shadow: 0 0 5px lightblue;
 }
 
+#card-vesti h3{
+  padding-bottom: 1rem;
+}
 
 @media (max-width: 767px) {
   .no-wrap {
