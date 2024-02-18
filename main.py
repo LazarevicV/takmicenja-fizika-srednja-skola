@@ -42,4 +42,4 @@ def vesti():
 def okruzno():
     return render_template('okruzno.html')
 
-app.run(debug=True, host='192.168.0.46')
+app.run(debug=True, host='0.0.0.0')
