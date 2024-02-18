@@ -210,11 +210,16 @@
 }
 
 .nav-link.active {
-  color: #fff;/* Postavite boju teksta prema potrebi */
-  font-weight: bold; /* Dodajte druge stilove prema potrebi */
+  color: #fff;
+  /* Postavite boju teksta prema potrebi */
+  font-weight: bold;
+  /* Dodajte druge stilove prema potrebi */
   text-shadow: 0 0 5px lightblue;
 }
 
+#card-vesti h3 {
+  padding-bottom: 1rem;
+}
 
 @media (max-width: 767px) {
   .no-wrap {

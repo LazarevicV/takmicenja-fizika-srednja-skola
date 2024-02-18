@@ -23,34 +23,44 @@
             <div class="collapse navbar-collapse fix-width" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto navbar-letters flex-wrap">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}" id="home-link">Насловна</a>
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}"
+                            id="home-link">Насловна</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/vesti' %}active{% endif %}" href="{{ url_for('vesti') }}" id="vesti-link">Вести</a>
+                        <a class="nav-link {% if request.path == '/vesti' %}active{% endif %}"
+                            href="{{ url_for('vesti') }}" id="vesti-link">Вести</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/opstinsko' %}active{% endif %}" href="{{ url_for('opstinsko') }}" id="opstinsko-link">Општинско</a>
+                        <a class="nav-link {% if request.path == '/opstinsko' %}active{% endif %}"
+                            href="{{ url_for('opstinsko') }}" id="opstinsko-link">Општинско</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/okruzno' %}active{% endif %}" href="{{ url_for('okruzno') }}" id="okruzno-link">Окружно</a>
+                        <a class="nav-link {% if request.path == '/okruzno' %}active{% endif %}"
+                            href="{{ url_for('okruzno') }}" id="okruzno-link">Окружно</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/drzavno' %}active{% endif %}" href="{{ url_for('drzavno') }}" id="drzavno-link">Државно</a>
+                        <a class="nav-link {% if request.path == '/drzavno' %}active{% endif %}"
+                            href="{{ url_for('drzavno') }}" id="drzavno-link">Државно</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/sfo' %}active{% endif %}" href="{{ url_for('sfo') }}" id="sfo-link">СФО</a>
+                        <a class="nav-link {% if request.path == '/sfo' %}active{% endif %}" href="{{ url_for('sfo') }}"
+                            id="sfo-link">СФО</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/ipho' %}active{% endif %}" href="{{ url_for('ipho') }}" id="ipho-link">IPhO</a>
+                        <a class="nav-link {% if request.path == '/ipho' %}active{% endif %}"
+                            href="{{ url_for('ipho') }}" id="ipho-link">IPhO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/zadaci' %}active{% endif %}" href="{{ url_for('zadaci') }}" id="zadaci-link">Задаци</a>
+                        <a class="nav-link {% if request.path == '/zadaci' %}active{% endif %}"
+                            href="{{ url_for('zadaci') }}" id="zadaci-link">Задаци</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/opste_informacije' %}active{% endif %}" href="{{ url_for('opste_informacije') }}" id="opste_informacije-link">Опште информације</a>
+                        <a class="nav-link {% if request.path == '/opste_informacije' %}active{% endif %}"
+                            href="{{ url_for('opste_informacije') }}" id="opste_informacije-link">Опште информације</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/kontakt' %}active{% endif %}" href="{{ url_for('kontakt') }}" id="kontakt-link">Контакт</a>
+                        <a class="nav-link {% if request.path == '/kontakt' %}active{% endif %}"
+                            href="{{ url_for('kontakt') }}" id="kontakt-link">Контакт</a>
                     </li>
                 </ul>
             </div>
