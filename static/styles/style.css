@@ -58,15 +58,18 @@
   text-decoration: none;
   border-radius: 50px;
   background-color: transparent;
-  color: rgb(185, 132, 0);
+  color: black;
   transition: all 0.2s ease-in-out;
   padding: 5px 10px;
   margin-bottom: 10px;
+  background-color: palegoldenrod;
 
   &:hover {
-    background-color: palegoldenrod;
-    color: blue;
+    background-color: lightblue;
   }
+}
+#main_linkovi_pillshaped2 ul li{
+  padding: .5rem 0;
 }
 
 .justify-content-md-center p {
