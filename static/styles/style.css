@@ -223,6 +223,33 @@
   padding-bottom: 1rem;
 }
 
+.news-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.news-item {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.news-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.news-item .news-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-align: justify;
+}
+.news-item .more-button {
+  margin-top: 1rem;
+  text-align: right;
+}
+
 @media (max-width: 767px) {
   .no-wrap {
     display: flex;
