@@ -40,18 +40,17 @@
         height: 100%;
 } */
 
-#main_linkovi_pillshaped a {
+#main_linkovi_pillshaped_1 a {
   text-decoration: none;
   border-radius: 50px;
   background-color: transparent;
-  color: rgb(185, 132, 0);
+  color: black;
   transition: all 0.2s ease-in-out;
   padding: 2px 10px;
   margin-bottom: 10px;
 
   &:hover {
     background-color: palegoldenrod;
-    color: blue;
   }
 }
 
@@ -276,5 +275,9 @@
   .table-responsive p {
     font-size: 14px;
     /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
+  }
+
+  #container-naslovna{
+    padding-bottom: 10rem;
   }
 }
