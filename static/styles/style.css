@@ -60,16 +60,16 @@
   background-color: transparent;
   color: black;
   transition: all 0.2s ease-in-out;
-  padding: 5px 10px;
+  padding: 5px 15px;
   margin-bottom: 10px;
-  background-color: palegoldenrod;
+  background-color: white;
+  display: inline-block; /* Dodajte display: inline-block */
+    width: 16rem; /* Postavite željenu širinu "pillshape-a" */
+    text-align: center; /* Da biste centrirali tekst unutar "pillshape-a" */
 
   &:hover {
     background-color: lightblue;
   }
-}
-#main_linkovi_pillshaped2 ul li{
-  padding: .5rem 0;
 }
 
 .justify-content-md-center p {
@@ -280,7 +280,7 @@
     /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
   }
 
-  /* #container-naslovna {
-    
-} */
+  #container-naslovna{
+    height: auto !important;
+  }
 }
