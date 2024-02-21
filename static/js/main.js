@@ -1,3 +1,4 @@
+// Za aktivni link na navbar
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM učitan.");
 
@@ -13,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Active klasa dodata.");
     }
 });
+// Za aktivni link na navbar
 
+// Back to top button
 let mybutton = document.getElementById("btn-back-to-top");
 
 window.onscroll = function () {
@@ -36,41 +39,45 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+// Back to top button
 
-document.addEventListener("DOMContentLoaded", function () {
-    const newsPages = document.querySelectorAll('.news-page');
-    let currentPage = 1;
 
-    function showPage(pageNumber) {
-        newsPages.forEach(page => {
-            page.style.display = "none";
-        });
+// Paginacija
 
-        const selectedPage = document.querySelector(`.news-page[data-page="${pageNumber}"]`);
-        if (selectedPage) {
-            selectedPage.style.display = "flex"; // Podešavanje stila na flex ako koristite Bootstrap grid system
-        }
-    }
+// document.addEventListener("DOMContentLoaded", function () {
+//     const newsPages = document.querySelectorAll('.news-page');
+//     let currentPage = 1;
 
-    function updatePagination() {
-        const paginationLinks = document.querySelectorAll('.pagination .page-link');
-        paginationLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-                const targetPage = this.innerText;
-                if (targetPage === '«') {
-                    currentPage = Math.max(1, currentPage - 1);
-                } else if (targetPage === '»') {
-                    currentPage = Math.min(newsPages.length, currentPage + 1);
-                } else {
-                    currentPage = parseInt(targetPage);
-                }
+//     function showPage(pageNumber) {
+//         newsPages.forEach(page => {
+//             page.style.display = "none";
+//         });
 
-                showPage(currentPage);
-            });
-        });
-    }
+//         const selectedPage = document.querySelector(`.news-page[data-page="${pageNumber}"]`);
+//         if (selectedPage) {
+//             selectedPage.style.display = "flex"; // Podešavanje stila na flex ako koristite Bootstrap grid system
+//         }
+//     }
 
-    showPage(currentPage);
-    updatePagination();
-});
+//     function updatePagination() {
+//         const paginationLinks = document.querySelectorAll('.pagination .page-link');
+//         paginationLinks.forEach(link => {
+//             link.addEventListener('click', function (event) {
+//                 event.preventDefault();
+//                 const targetPage = this.innerText;
+//                 if (targetPage === '«') {
+//                     currentPage = Math.max(1, currentPage - 1);
+//                 } else if (targetPage === '»') {
+//                     currentPage = Math.min(newsPages.length, currentPage + 1);
+//                 } else {
+//                     currentPage = parseInt(targetPage);
+//                 }
+
+//                 showPage(currentPage);
+//             });
+//         });
+//     }
+
+//     showPage(currentPage);
+//     updatePagination();
+// });
