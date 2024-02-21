@@ -240,9 +240,6 @@
   margin-bottom: 1rem;
 }
 .news-item .news-content {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
   text-align: justify;
 }
 .news-item .more-button {
