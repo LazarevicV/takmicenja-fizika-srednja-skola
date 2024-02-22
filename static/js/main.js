@@ -42,6 +42,44 @@ function backToTop() {
 // Back to top button
 
 
+
+let currentPage = 1;
+    const totalRows = 18; // Ukupan broj redova
+
+    function showPage(page) {
+        // Sakrij sve redove
+        for (let i = 1; i <= totalRows; i++) {
+            $(`#row${i}`).hide();
+        }
+
+        // Prikazi samo odabrani red
+        $(`#row${page}`).show();
+    }
+
+    function showNextPage() {
+        if (currentPage < totalRows) {
+            currentPage++;
+        } else {
+            currentPage = 1;
+        }
+        showPage(currentPage);
+    }
+
+    function showPreviousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+        } else {
+            currentPage = totalRows;
+        }
+        showPage(currentPage);
+    }
+
+    // Prikazi prvu stranu kada se stranica učita
+    $(document).ready(function () {
+        showPage(currentPage);
+    });
+
+
 // Paginacija
 
 // document.addEventListener("DOMContentLoaded", function () {
