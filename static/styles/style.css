@@ -249,11 +249,6 @@
   text-align: justify;
 }
 
-.news-item .more-button {
-  margin-top: 1rem;
-  text-align: right;
-}
-
 .pagination-container {
   text-align: center;
   margin-top: 20px;
@@ -266,6 +261,16 @@
 .current-page {
   background-color: #007bff;
   color: #fff;
+}
+
+/* CSS za sakrivanje svih redova prilikom učitavanja stranice */
+.row.vesti {
+  display: none;
+}
+
+/* CSS za prikazivanje samo odabranog reda */
+.row.vesti.flex {
+  display: flex;
 }
 
 @media (max-width: 767px) {
