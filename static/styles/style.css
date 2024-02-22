@@ -63,9 +63,12 @@
   padding: 5px 15px;
   margin-bottom: 10px;
   background-color: white;
-  display: inline-block; /* Dodajte display: inline-block */
-    width: 16rem; /* Postavite željenu širinu "pillshape-a" */
-    text-align: center; /* Da biste centrirali tekst unutar "pillshape-a" */
+  display: inline-block;
+  /* Dodajte display: inline-block */
+  width: 16rem;
+  /* Postavite željenu širinu "pillshape-a" */
+  text-align: center;
+  /* Da biste centrirali tekst unutar "pillshape-a" */
 
   &:hover {
     background-color: lightblue;
@@ -228,62 +231,38 @@
   margin: 0 auto;
   padding: 2rem;
 }
+
 .news-item {
   margin-bottom: 2rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 1rem;
 }
+
 .news-item img {
   max-width: 100%;
   height: auto;
   margin-bottom: 1rem;
 }
+
 .news-item .news-content {
   text-align: justify;
 }
+
 .news-item .more-button {
   margin-top: 1rem;
   text-align: right;
 }
 
-.row {
-  display: none;
-}
-
-#row1,
-#row2,
-#row3,
-#row4,
-#row5,
-#row6,
-#row7,
-#row8,
-#row9,
-#row10,
-#row11,
-#row12,
-#row13,
-#row14,
-#row15,
-#row16,
-#row17,
-#row18 {
-  display: flex;
-}
-
-/* Stil za paginaciju */
 .pagination-container {
   text-align: center;
   margin-top: 20px;
 }
 
-/* Stil za dugmad paginacije */
 .btn-pagination {
   margin: 0 5px;
 }
 
-/* Stil za označavanje trenutne stranice */
 .current-page {
   background-color: #007bff;
   color: #fff;
@@ -346,7 +325,7 @@
     /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
   }
 
-  #container-naslovna{
+  #container-naslovna {
     height: auto !important;
   }
 }

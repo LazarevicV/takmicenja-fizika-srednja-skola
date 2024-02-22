@@ -49,11 +49,17 @@ const totalRows = 18;
 function showPage(page) {
     // Sakrij sve redove
     for (let i = 1; i <= totalRows; i++) {
-        $(`#row${i}`).hide();
+        const row = document.getElementById(`row${i}`);
+        if (row) {
+            row.style.display = 'none';
+        }
     }
 
     // Prikazi samo odabrani red
-    $(`#row${page}`).show();
+    const selectedRow = document.getElementById(`row${page}`);
+    if (selectedRow) {
+        selectedRow.style.display = 'flex';
+    }
 
     // Ukloni klasu current-page sa svih dugmadi paginacije
     document.querySelectorAll('.btn-pagination').forEach(btn => {
@@ -61,18 +67,25 @@ function showPage(page) {
     });
 
     // Dodaj klasu current-page na trenutno označeno dugme
-    document.querySelector(`.btn-pagination:nth-child(${page})`).classList.add('current-page');
+    const selectedButton = document.querySelector(`.btn-pagination:nth-child(${page})`);
+    if (selectedButton) {
+        selectedButton.classList.add('current-page');
+    }
 
     // Pomeri na vrh stranice
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Onemogući dugme za prethodnu stranu ako smo na prvoj stranici
+    document.getElementById('btnPrevious').disabled = page === 1;
+
+    // Onemogući dugme za sledeću stranu ako smo na poslednjoj stranici
+    document.getElementById('btnNext').disabled = page === totalRows;
 }
 
 function showNextPage(event) {
     event.preventDefault();
     if (currentPage < totalRows) {
         currentPage++;
-    } else {
-        currentPage = 1;
     }
     showPage(currentPage);
 }
@@ -81,11 +94,10 @@ function showPreviousPage(event) {
     event.preventDefault();
     if (currentPage > 1) {
         currentPage--;
-    } else {
-        currentPage = totalRows;
     }
     showPage(currentPage);
 }
+
 
 // Prikazi prvu stranu kada se stranica učita
 document.addEventListener("DOMContentLoaded", function () {
