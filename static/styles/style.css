@@ -40,18 +40,17 @@
         height: 100%;
 } */
 
-#main_linkovi_pillshaped a {
+#main_linkovi_pillshaped_1 a {
   text-decoration: none;
   border-radius: 50px;
   background-color: transparent;
-  color: rgb(185, 132, 0);
+  color: black;
   transition: all 0.2s ease-in-out;
   padding: 2px 10px;
   margin-bottom: 10px;
 
   &:hover {
     background-color: palegoldenrod;
-    color: blue;
   }
 }
 
@@ -59,14 +58,20 @@
   text-decoration: none;
   border-radius: 50px;
   background-color: transparent;
-  color: rgb(185, 132, 0);
+  color: black;
   transition: all 0.2s ease-in-out;
-  padding: 5px 10px;
+  padding: 5px 15px;
   margin-bottom: 10px;
+  background-color: white;
+  display: inline-block;
+  /* Dodajte display: inline-block */
+  width: 16rem;
+  /* Postavite željenu širinu "pillshape-a" */
+  text-align: center;
+  /* Da biste centrirali tekst unutar "pillshape-a" */
 
   &:hover {
-    background-color: palegoldenrod;
-    color: blue;
+    background-color: lightblue;
   }
 }
 
@@ -221,6 +226,53 @@
   padding-bottom: 1rem;
 }
 
+.news-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.news-item {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.news-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.news-item .news-content {
+  text-align: justify;
+}
+
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-pagination {
+  margin: 0 5px;
+}
+
+.current-page {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* CSS za sakrivanje svih redova prilikom učitavanja stranice */
+.row.vesti {
+  display: none;
+}
+
+/* CSS za prikazivanje samo odabranog reda */
+.row.vesti.flex {
+  display: flex;
+}
+
 @media (max-width: 767px) {
   .no-wrap {
     display: flex;
@@ -276,5 +328,9 @@
   .table-responsive p {
     font-size: 14px;
     /* Podesite veličinu fonta za mobilne uređaje prema potrebi */
+  }
+
+  #container-naslovna {
+    height: auto !important;
   }
 }
