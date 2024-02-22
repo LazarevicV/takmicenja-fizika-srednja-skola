@@ -104,3 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
     showPage(currentPage);
 });
 
+
+// // Prikazi prvu stranu kada se stranica učita
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Proverite da li se nalazite na stranici "vesti.html"
+//     if (window.location.pathname.includes("vesti.html")) {
+//         // Ako da, prikaži prvu stranu
+//         showPage(currentPage);
+//     }
+// });
