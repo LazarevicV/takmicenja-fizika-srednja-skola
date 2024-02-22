@@ -47,18 +47,18 @@ let currentPage = 1;
 const totalRows = 18;
 
 function showPage(page) {
-    // Sakrij sve redove
-    for (let i = 1; i <= totalRows; i++) {
-        const row = document.getElementById(`row${i}`);
-        if (row) {
-            row.style.display = 'none';
-        }
-    }
+    // Sakrij sve redove koji nemaju klasu "vesti"
+    const rows = document.querySelectorAll('.row.vesti');
+    rows.forEach(row => {
+        row.classList.remove('d-flex'); // Uklanja 'd-flex' klasu
+    });
 
     // Prikazi samo odabrani red
     const selectedRow = document.getElementById(`row${page}`);
     if (selectedRow) {
-        selectedRow.style.display = 'flex';
+        selectedRow.classList.add('d-flex'); // Dodaje 'd-flex' klasu
+        // Dodajte skakanje na odabrani red (koristeći ID stranice kao sidro)
+        window.location.hash = `#row${page}`;
     }
 
     // Ukloni klasu current-page sa svih dugmadi paginacije
@@ -82,6 +82,7 @@ function showPage(page) {
     document.getElementById('btnNext').disabled = page === totalRows;
 }
 
+
 function showNextPage(event) {
     event.preventDefault();
     if (currentPage < totalRows) {
@@ -98,18 +99,21 @@ function showPreviousPage(event) {
     showPage(currentPage);
 }
 
-
 // Prikazi prvu stranu kada se stranica učita
-document.addEventListener("DOMContentLoaded", function () {
-    showPage(currentPage);
-});
+window.onload = function () {
+    // Proverite da li se nalazite na stranici "vesti.html"
+    if (window.location.pathname.includes("vesti.html")) {
+        // Ako da, prikaži prvu stranu
+        showPage(currentPage);
+    }
+};
+
+
+
+
 
 
 // // Prikazi prvu stranu kada se stranica učita
 // document.addEventListener("DOMContentLoaded", function () {
-//     // Proverite da li se nalazite na stranici "vesti.html"
-//     if (window.location.pathname.includes("vesti.html")) {
-//         // Ako da, prikaži prvu stranu
-//         showPage(currentPage);
-//     }
+//     showPage(currentPage);
 // });
