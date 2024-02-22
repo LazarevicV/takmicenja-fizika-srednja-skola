@@ -247,6 +247,48 @@
   text-align: right;
 }
 
+.row {
+  display: none;
+}
+
+#row1,
+#row2,
+#row3,
+#row4,
+#row5,
+#row6,
+#row7,
+#row8,
+#row9,
+#row10,
+#row11,
+#row12,
+#row13,
+#row14,
+#row15,
+#row16,
+#row17,
+#row18 {
+  display: flex;
+}
+
+/* Stil za paginaciju */
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Stil za dugmad paginacije */
+.btn-pagination {
+  margin: 0 5px;
+}
+
+/* Stil za označavanje trenutne stranice */
+.current-page {
+  background-color: #007bff;
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .no-wrap {
     display: flex;
