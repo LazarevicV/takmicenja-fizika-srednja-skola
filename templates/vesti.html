@@ -1250,16 +1250,71 @@
         <button class="btn btn-primary" onclick="showPreviousPage()">Prethodna strana</button>
         <button class="btn btn-primary" onclick="showNextPage()">Sledeća strana</button>
     </div>
-    
 
-    <style>
-        .row {
-            display: none;
-        }
+    <div class="pagination-container">
+        <button class="btn btn-pagination" onclick="showPage(1)">1</button>
+        <button class="btn btn-pagination" onclick="showPage(2)">2</button>
+        <button class="btn btn-pagination" onclick="showPage(3)">3</button>
+        <button class="btn btn-pagination" onclick="showPage(4)">4</button>
+        <button class="btn btn-pagination" onclick="showPage(5)">5</button>
+        <button class="btn btn-pagination" onclick="showPage(6)">6</button>
+        <button class="btn btn-pagination" onclick="showPage(7)">7</button>
+        <button class="btn btn-pagination" onclick="showPage(8)">8</button>
+        <button class="btn btn-pagination" onclick="showPage(9)">9</button>
+        <button class="btn btn-pagination" onclick="showPage(10)">10</button>
+        <button class="btn btn-pagination" onclick="showPage(11)">11</button>
+        <button class="btn btn-pagination" onclick="showPage(12)">12</button>
+        <button class="btn btn-pagination" onclick="showPage(13)">13</button>
+        <button class="btn btn-pagination" onclick="showPage(14)">14</button>
+        <button class="btn btn-pagination" onclick="showPage(15)">15</button>
+        <button class="btn btn-pagination" onclick="showPage(16)">16</button>
+        <button class="btn btn-pagination" onclick="showPage(17)">17</button>
+        <button class="btn btn-pagination" onclick="showPage(18)">18</button>
+        <!-- Dodajte dugmad prema broju stranica koje imate -->
+    </div>
     
-        #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10, #row11, #row12, #row13, #row14, #row16, #row17, #row18{
-            display: flex;
-        }
+<style>
+    .row {
+        display: none;
+    }
+
+    #row1,
+    #row2,
+    #row3,
+    #row4,
+    #row5,
+    #row6,
+    #row7,
+    #row8,
+    #row9,
+    #row10,
+    #row11,
+    #row12,
+    #row13,
+    #row14,
+    #row15,
+    #row16,
+    #row17,
+    #row18 {
+        display: flex;
+    }
+
+    /* Stil za paginaciju */
+    .pagination-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Stil za dugmad paginacije */
+    .btn-pagination {
+        margin: 0 5px;
+    }
+
+    /* Stil za označavanje trenutne stranice */
+.current-page {
+    background-color: #007bff;
+    color: #fff;
+}
     </style>
     
 

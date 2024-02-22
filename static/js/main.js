@@ -42,80 +42,47 @@ function backToTop() {
 // Back to top button
 
 
-
+// paginacija, button za sledeca i prethodna stranica
 let currentPage = 1;
-    const totalRows = 18; // Ukupan broj redova
+const totalRows = 18;
 
-    function showPage(page) {
-        // Sakrij sve redove
-        for (let i = 1; i <= totalRows; i++) {
-            $(`#row${i}`).hide();
-        }
-
-        // Prikazi samo odabrani red
-        $(`#row${page}`).show();
+function showPage(page) {
+    // Sakrij sve redove
+    for (let i = 1; i <= totalRows; i++) {
+        $(`#row${i}`).hide();
     }
 
-    function showNextPage() {
-        if (currentPage < totalRows) {
-            currentPage++;
-        } else {
-            currentPage = 1;
-        }
-        showPage(currentPage);
-    }
+    // Prikazi samo odabrani red
+    $(`#row${page}`).show();
 
-    function showPreviousPage() {
-        if (currentPage > 1) {
-            currentPage--;
-        } else {
-            currentPage = totalRows;
-        }
-        showPage(currentPage);
-    }
-
-    // Prikazi prvu stranu kada se stranica učita
-    $(document).ready(function () {
-        showPage(currentPage);
+    // Ukloni klasu current-page sa svih dugmadi paginacije
+    document.querySelectorAll('.btn-pagination').forEach(btn => {
+        btn.classList.remove('current-page');
     });
 
+    // Dodaj klasu current-page na trenutno označeno dugme
+    document.querySelector(`.btn-pagination:nth-child(${page})`).classList.add('current-page');
+}
 
-// Paginacija
+function showNextPage() {
+    if (currentPage < totalRows) {
+        currentPage++;
+    } else {
+        currentPage = 1;
+    }
+    showPage(currentPage);
+}
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const newsPages = document.querySelectorAll('.news-page');
-//     let currentPage = 1;
+function showPreviousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+    } else {
+        currentPage = totalRows;
+    }
+    showPage(currentPage);
+}
 
-//     function showPage(pageNumber) {
-//         newsPages.forEach(page => {
-//             page.style.display = "none";
-//         });
-
-//         const selectedPage = document.querySelector(`.news-page[data-page="${pageNumber}"]`);
-//         if (selectedPage) {
-//             selectedPage.style.display = "flex"; // Podešavanje stila na flex ako koristite Bootstrap grid system
-//         }
-//     }
-
-//     function updatePagination() {
-//         const paginationLinks = document.querySelectorAll('.pagination .page-link');
-//         paginationLinks.forEach(link => {
-//             link.addEventListener('click', function (event) {
-//                 event.preventDefault();
-//                 const targetPage = this.innerText;
-//                 if (targetPage === '«') {
-//                     currentPage = Math.max(1, currentPage - 1);
-//                 } else if (targetPage === '»') {
-//                     currentPage = Math.min(newsPages.length, currentPage + 1);
-//                 } else {
-//                     currentPage = parseInt(targetPage);
-//                 }
-
-//                 showPage(currentPage);
-//             });
-//         });
-//     }
-
-//     showPage(currentPage);
-//     updatePagination();
-// });
+// Prikazi prvu stranu kada se stranica učita
+document.addEventListener("DOMContentLoaded", function () {
+    showPage(currentPage);
+});
