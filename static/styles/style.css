@@ -272,6 +272,9 @@
 .row.vesti.flex {
   display: flex;
 }
+.row.vesti{
+  padding-top: 2rem;
+}
 
 @media (max-width: 767px) {
   .no-wrap {
