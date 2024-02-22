@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Za aktivni link na navbar
 
+
 // Back to top button
 let mybutton = document.getElementById("btn-back-to-top");
 
@@ -44,6 +45,7 @@ function backToTop() {
 
 // paginacija, button za sledeca i prethodna stranica
 let currentPage = 1;
+let displayedPage = 1; // Dodajte novu promenljivu za praćenje trenutno prikazane stranice
 const totalRows = 18;
 
 function showPage(page) {
@@ -75,28 +77,30 @@ function showPage(page) {
     // Pomeri na vrh stranice
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    // Ažuriraj trenutnu prikazanu stranicu
+    displayedPage = page;
+
     // Onemogući dugme za prethodnu stranu ako smo na prvoj stranici
-    document.getElementById('btnPrevious').disabled = page === 1;
+    document.getElementById('btnPrevious').disabled = displayedPage === 1;
 
     // Onemogući dugme za sledeću stranu ako smo na poslednjoj stranici
-    document.getElementById('btnNext').disabled = page === totalRows;
+    document.getElementById('btnNext').disabled = displayedPage === totalRows;
 }
-
 
 function showNextPage(event) {
     event.preventDefault();
-    if (currentPage < totalRows) {
-        currentPage++;
+    const nextPage = displayedPage + 1;
+    if (nextPage <= totalRows) {
+        showPage(nextPage);
     }
-    showPage(currentPage);
 }
 
 function showPreviousPage(event) {
     event.preventDefault();
-    if (currentPage > 1) {
-        currentPage--;
+    const previousPage = displayedPage - 1;
+    if (previousPage >= 1) {
+        showPage(previousPage);
     }
-    showPage(currentPage);
 }
 
 // Prikazi prvu stranu kada se stranica učita
@@ -107,13 +111,3 @@ window.onload = function () {
         showPage(currentPage);
     }
 };
-
-
-
-
-
-
-// // Prikazi prvu stranu kada se stranica učita
-// document.addEventListener("DOMContentLoaded", function () {
-//     showPage(currentPage);
-// });
