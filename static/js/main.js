@@ -62,9 +62,13 @@ function showPage(page) {
 
     // Dodaj klasu current-page na trenutno označeno dugme
     document.querySelector(`.btn-pagination:nth-child(${page})`).classList.add('current-page');
+
+    // Pomeri na vrh stranice
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function showNextPage() {
+function showNextPage(event) {
+    event.preventDefault();
     if (currentPage < totalRows) {
         currentPage++;
     } else {
@@ -73,7 +77,8 @@ function showNextPage() {
     showPage(currentPage);
 }
 
-function showPreviousPage() {
+function showPreviousPage(event) {
+    event.preventDefault();
     if (currentPage > 1) {
         currentPage--;
     } else {
@@ -86,3 +91,4 @@ function showPreviousPage() {
 document.addEventListener("DOMContentLoaded", function () {
     showPage(currentPage);
 });
+
