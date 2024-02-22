@@ -46,6 +46,7 @@ function backToTop() {
 // paginacija, button za sledeca i prethodna stranica
 let currentPage = 1;
 let displayedPage = 1; // Dodajte novu promenljivu za praćenje trenutno prikazane stranice
+const rowsPerPage = 1;
 const totalRows = 18;
 
 function showPage(page) {
@@ -103,11 +104,50 @@ function showPreviousPage(event) {
     }
 }
 
-// Prikazi prvu stranu kada se stranica učita
+function generatePaginationButtons() {
+    console.log("Generisanje dugmadi za paginaciju...");
+    const totalPages = Math.ceil(totalRows / rowsPerPage);
+    console.log("Ukupan broj stranica:", totalPages);
+
+    const paginationContainer = document.querySelector('.pagination-container');
+    console.log("Pronađen kontejner za paginaciju:", paginationContainer);
+
+    paginationContainer.innerHTML = ''; // Očisti postojeće dugmadi
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.className = 'btn btn-pagination';
+        button.textContent = i;
+        button.onclick = () => showPage(i);
+        paginationContainer.appendChild(button);
+    }
+
+    console.log("Dugmadi za paginaciju generisana.");
+}
+
+console.log("Poziv funkcije generatePaginationButtons");
+generatePaginationButtons();
+
+
+
+// Pozovite funkciju za generisanje dugmadi prilikom učitavanja stranice
 window.onload = function () {
     // Proverite da li se nalazite na stranici "vesti.html"
     if (window.location.pathname.includes("vesti.html")) {
+        // Generiši dugmadi za paginaciju prvo
+        generatePaginationButtons();
         // Ako da, prikaži prvu stranu
         showPage(currentPage);
     }
 };
+
+
+
+// // Prikazi prvu stranu kada se stranica učita
+// window.onload = function () {
+//     // Proverite da li se nalazite na stranici "vesti.html"
+//     if (window.location.pathname.includes("vesti.html")) {
+//         // Ako da, prikaži prvu stranu
+//         showPage(currentPage);
+//     }
+// };
