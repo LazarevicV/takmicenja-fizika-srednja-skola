@@ -45,53 +45,40 @@ function backToTop() {
 
 // paginacija, button za sledeca i prethodna stranica
 let currentPage = 1;
-let displayedPage = 1; // Dodajte novu promenljivu za praćenje trenutno prikazane stranice
-const rowsPerPage = 1;
-const totalRows = 18;
+let displayedPage = 1;
+const rowsPerPage = 1; // Broj redova po stranici
+let totalRows = document.querySelectorAll('.row.vesti').length; // Ukupan broj redova
 
 function showPage(page) {
-    // Sakrij sve redove koji nemaju klasu "vesti"
     const rows = document.querySelectorAll('.row.vesti');
-    rows.forEach(row => {
-        row.classList.remove('d-flex'); // Uklanja 'd-flex' klasu
+    rows.forEach((row, index) => {
+        // Prikazi samo redove za trenutnu stranicu
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        row.classList.toggle('d-flex', index >= start && index < end);
     });
 
-    // Prikazi samo odabrani red
-    const selectedRow = document.getElementById(`row${page}`);
-    if (selectedRow) {
-        selectedRow.classList.add('d-flex'); // Dodaje 'd-flex' klasu
-        // Dodajte skakanje na odabrani red (koristeći ID stranice kao sidro)
-        window.location.hash = `#row${page}`;
-    }
-
-    // Ukloni klasu current-page sa svih dugmadi paginacije
     document.querySelectorAll('.btn-pagination').forEach(btn => {
         btn.classList.remove('current-page');
     });
 
-    // Dodaj klasu current-page na trenutno označeno dugme
     const selectedButton = document.querySelector(`.btn-pagination:nth-child(${page})`);
     if (selectedButton) {
         selectedButton.classList.add('current-page');
     }
 
-    // Pomeri na vrh stranice
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Ažuriraj trenutnu prikazanu stranicu
     displayedPage = page;
 
-    // Onemogući dugme za prethodnu stranu ako smo na prvoj stranici
     document.getElementById('btnPrevious').disabled = displayedPage === 1;
-
-    // Onemogući dugme za sledeću stranu ako smo na poslednjoj stranici
-    document.getElementById('btnNext').disabled = displayedPage === totalRows;
+    document.getElementById('btnNext').disabled = displayedPage === Math.ceil(totalRows / rowsPerPage);
 }
 
 function showNextPage(event) {
     event.preventDefault();
     const nextPage = displayedPage + 1;
-    if (nextPage <= totalRows) {
+    if (nextPage <= Math.ceil(totalRows / rowsPerPage)) {
         showPage(nextPage);
     }
 }
@@ -106,13 +93,14 @@ function showPreviousPage(event) {
 
 function generatePaginationButtons() {
     console.log("Generisanje dugmadi za paginaciju...");
+    totalRows = document.querySelectorAll('.row.vesti').length; // Ažuriraj ukupan broj redova
     const totalPages = Math.ceil(totalRows / rowsPerPage);
     console.log("Ukupan broj stranica:", totalPages);
 
     const paginationContainer = document.querySelector('.pagination-container');
     console.log("Pronađen kontejner za paginaciju:", paginationContainer);
 
-    paginationContainer.innerHTML = ''; // Očisti postojeće dugmadi
+    paginationContainer.innerHTML = '';
 
     for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement('button');
@@ -128,18 +116,13 @@ function generatePaginationButtons() {
 console.log("Poziv funkcije generatePaginationButtons");
 generatePaginationButtons();
 
-
-
-// Pozovite funkciju za generisanje dugmadi prilikom učitavanja stranice
 window.onload = function () {
-    // Proverite da li se nalazite na stranici "vesti.html"
     if (window.location.pathname.includes("vesti.html")) {
-        // Generiši dugmadi za paginaciju prvo
         generatePaginationButtons();
-        // Ako da, prikaži prvu stranu
         showPage(currentPage);
     }
 };
+
 
 
 
