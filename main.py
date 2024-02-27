@@ -42,12 +42,4 @@ def vesti():
 def okruzno():
     return render_template('okruzno.html')
 
-@app.route('/vesti2')
-def vesti2():
-    return render_template('/vesti2.html')
-
-@app.route('/vesti3')
-def vesti3():
-    return render_template('/vesti3.html')
-
 app.run(debug=True, host='0.0.0.0')
