@@ -8,7 +8,7 @@ def index():
 
 @app.route('/zadaci')
 def zadaci():
-    return render_template('zadaci.html')
+    return render_template('zadaci_resenja.html')
 
 @app.route('/kontakt')
 def kontakt():
@@ -41,5 +41,10 @@ def vesti():
 @app.route('/okruzno')
 def okruzno():
     return render_template('okruzno.html')
+
+@app.route('/pravilnici-o-takmicenjima')
+def pravila():
+    return render_template('vazna_dokumenta.html')
+
 
 app.run(debug=True, host='0.0.0.0')

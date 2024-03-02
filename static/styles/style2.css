@@ -41,6 +41,10 @@
     display: none;
 }
 
+.make_taller {
+    height: 75vh;
+}
+
 @media only screen and (max-width: 991px) {
     .ipho-table-smaller-screens {
         display: block;
@@ -70,6 +74,10 @@
 
     .make-text-smaller-more-smaller-screens {
         font-size: 15px;
+    }
+
+    .make_taller {
+        height: 43.5vh;
     }
   }
 
@@ -108,3 +116,4 @@
         padding-top: 2em;
     }
 }
+
