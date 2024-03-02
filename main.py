@@ -8,7 +8,7 @@ def index():
 
 @app.route('/zadaci')
 def zadaci():
-    return render_template('zadaci.html')
+    return render_template('zadaci_resenja.html')
 
 @app.route('/kontakt')
 def kontakt():
