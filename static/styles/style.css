@@ -297,12 +297,15 @@
 
 /* CSS za sakrivanje svih redova prilikom učitavanja stranice */
 .row.vesti {
-  display: none;
+  display: flex;
 }
-
 /* CSS za prikazivanje samo odabranog reda */
 .row.vesti.flex {
   display: flex;
+}
+/* CSS za skrivanje odabranog reda */
+.row.vesti:not(.d-flex) {
+  display: none;
 }
 .row.vesti{
   padding-top: 2rem;
