@@ -51,11 +51,12 @@
                             href="{{ url_for('ipho') }}" id="ipho-link">IPhO</a>
                     </li>
                     <li class="nav-item nav-item-dropdown">
-                        <a class="nav-link {% if request.path == '/zadaci' %}active{% endif %}" href="{{ url_for('zadaci') }}">Задаци</a>
+                        <a class="nav-link {% if request.path == '/zadaci' %}active{% endif %}"
+                            href="{{ url_for('zadaci') }}">Задаци</a>
                         <!-- Dodali smo klasu "dropdown-menu" za stilizaciju -->
                         <ul class="dropdown-menu">
                             <li class="dropdown-item"><a href="{{ url_for('opstinsko_zadaci') }}">Општинско</a></li>
-                            <li class="dropdown-item"><a href="{{ url_for('okruzno') }}">Окружно</a></li>
+                            <li class="dropdown-item"><a href="{{ url_for('okruzno_zadaci') }}">Окружно</a></li>
                             <li class="dropdown-item"><a href="{{ url_for('drzavno_zadaci') }}">Државно</a></li>
                         </ul>
                     </li>
