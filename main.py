@@ -50,4 +50,8 @@ def pravila():
 def opstinsko_zadaci():
     return render_template('opstinsko_zadaci.html')
 
+@app.route('/drzavno_zadaci')
+def drzavno_zadaci():
+    return render_template('drzavno_zadaci.html')
+
 app.run(debug=True, host='0.0.0.0')
