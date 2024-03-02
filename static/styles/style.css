@@ -23,14 +23,55 @@
   font-size: 20px;
 }
 
-.navbar-letters li {
-  width: auto;
-  padding-right: 1em;
+.nav-item-dropdown {
+  position: relative;
 }
 
-.navbar li a {
-  color: white;
+/* Stilizacija dropdown menija */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #343a40; /* Boja pozadine dropdown menija */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Senka */
+  z-index: 1;
 }
+
+/* Stilizacija linkova u dropdown meniju */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer; /* Dodali smo stil da pokazivač miša bude kao ruka (kursor) */
+}
+
+/* Prikazivanje dropdown menija kada se hoveruje na .nav-item-dropdown */
+.nav-item-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Boja linkova u dropdown meniju kada se hoveruje */
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+/* Boja teksta linkova u dropdown meniju */
+.navbar-letters li a, .dropdown-item {
+  color: white;
+  text-decoration: none; /* Dodato da se ukloni podvučenost linkova u dropdown meniju */
+  display: block; /* Prikazuje link kao blok element, zauzima celu širinu roditeljskog reda */
+}
+
+/* Stilizacija aktivnog linka u dropdown meniju */
+.dropdown-item.active {
+  background-color: #007bff; /* Boja aktivnog linka */
+}
+
+.nav-link.active {
+  color: #fff;
+  /* Postavite boju teksta prema potrebi */
+  font-weight: bold;
+  /* Dodajte druge stilove prema potrebi */
+  text-shadow: 0 0 5px lightblue;
+}
+
 
 /* @media only screen and (max-width: 765px) {
     body {
@@ -214,14 +255,6 @@
   /* Podesite razmak između linkova prema potrebi */
 }
 
-.nav-link.active {
-  color: #fff;
-  /* Postavite boju teksta prema potrebi */
-  font-weight: bold;
-  /* Dodajte druge stilove prema potrebi */
-  text-shadow: 0 0 5px lightblue;
-}
-
 #card-vesti h3 {
   padding-bottom: 1rem;
 }
@@ -265,12 +298,15 @@
 
 /* CSS za sakrivanje svih redova prilikom učitavanja stranice */
 .row.vesti {
-  display: none;
+  display: flex;
 }
-
 /* CSS za prikazivanje samo odabranog reda */
 .row.vesti.flex {
   display: flex;
+}
+/* CSS za skrivanje odabranog reda */
+.row.vesti:not(.d-flex) {
+  display: none;
 }
 .row.vesti{
   padding-top: 2rem;
@@ -335,5 +371,31 @@
 
   #container-naslovna {
     height: auto !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    width: auto;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+  }
+
+  .nav-item-dropdown {
+    display: block !important;
+  }
+  .nav-item-dropdown:hover .dropdown-menu {
+    position: static !important;
+    display: block !important;
+    margin-top: 0 !important;
   }
 }
