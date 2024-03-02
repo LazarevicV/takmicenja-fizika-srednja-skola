@@ -46,5 +46,8 @@ def okruzno():
 def pravila():
     return render_template('vazna_dokumenta.html')
 
+@app.route('/opstinsko_zadaci')
+def opstinsko_zadaci():
+    return render_template('opstinsko_zadaci.html')
 
 app.run(debug=True, host='0.0.0.0')
