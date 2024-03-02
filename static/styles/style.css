@@ -72,6 +72,7 @@
   text-shadow: 0 0 5px lightblue;
 }
 
+
 /* @media only screen and (max-width: 765px) {
     body {
       background-color: lightblue;
@@ -297,12 +298,15 @@
 
 /* CSS za sakrivanje svih redova prilikom učitavanja stranice */
 .row.vesti {
-  display: none;
+  display: flex;
 }
-
 /* CSS za prikazivanje samo odabranog reda */
 .row.vesti.flex {
   display: flex;
+}
+/* CSS za skrivanje odabranog reda */
+.row.vesti:not(.d-flex) {
+  display: none;
 }
 .row.vesti{
   padding-top: 2rem;
@@ -367,5 +371,31 @@
 
   #container-naslovna {
     height: auto !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    width: auto;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+  }
+
+  .nav-item-dropdown {
+    display: block !important;
+  }
+  .nav-item-dropdown:hover .dropdown-menu {
+    position: static !important;
+    display: block !important;
+    margin-top: 0 !important;
   }
 }
