@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="container-fluid"
-    style="background-image: url(/static/images/viber_image_2024-02-20_12-47-14-888.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh;"
+    style="background-image: url(/static/images/viber_image_2024-02-20_12-47-14-888.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 85vh;"
     id="container-naslovna">
 
     <!-- Skolska 2023-2024 -->
@@ -16,25 +16,24 @@
 
     <!-- Main -->
     <div class="row justify-content-md-center" style="padding-bottom: 2rem;" id="main_linkovi_pillshaped_1">
-        <div class="col-12 col-md-3 text-center mx-auto" style="background-color: white; padding: 2rem; margin: 1rem;"
-            id="naslovna">
+        <div class="col-12 col-md-3 text-center rounded mx-auto"
+            style="background-color: white; padding: 2rem; margin: 1rem;" id="naslovna">
             <h3><a href="/vesti">Вести</a></h3>
             <p>У овом одељку ћете наћи вести и
                 обавештења везана за такмичења, као и
                 резултате такмичења.</p>
         </div>
-        <div class="col-12 col-md-3 text-center mx-auto" style="background-color: white; padding: 2rem; margin: 1rem;"
-            id="naslovna">
+        <div class="col-12 col-md-3 text-center rounded mx-auto"
+            style="background-color: white; padding: 2rem; margin: 1rem;" id="naslovna">
             <h3><a href="/zadaci">Задаци и решења</a></h3>
             <p>У овом одељку ћете наћи архиву
                 задатака са решењима који могу да вам
                 помогну да се спремите за такмичење,
                 од 2000. године до данас.</p>
         </div>
-        <div class="col-12 col-md-3 text-center mx-auto" style="background-color: white; padding: 2rem; margin: 1rem;"
-            id="naslovna">
-            <h3><a
-                    href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Pravilnik%20o%20takmicenjima%20iz%20fizike%20ucenika%20srednjih%20skola%20-%202023.pdf">Правилници
+        <div class="col-12 col-md-3 text-center rounded mx-auto"
+            style="background-color: white; padding: 2rem; margin: 1rem;" id="naslovna">
+            <h3><a href="{{url_for('pravila')}}">Правилници
                     о такмичењима</a></h3>
             <p>Овде ћете наћи правилник о такмичењу и
                 календар такмичења за ову годину.</p>
@@ -42,93 +41,6 @@
     </div>
     <!-- Main -->
 </div>
-
-
-<!-- Vazna dokumenta -->
-<div class="container" style="padding-top: 2rem;">
-    <div class="row text-center">
-        <div class="col">
-            <h1>Важна документа:</h1>
-        </div>
-    </div>
-    <div class="row" style="padding: 2rem; align-items: center; justify-content: center;">
-        <div class="col col-md-6">
-            <table class="table table-hover table-bordered table-responsive">
-                <tbody>
-                    <tr>
-                        <td class="align-middle"> <b>Правилник такмичења</b> </td>
-                        <td><a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Pravilnik%20o%20takmicenjima%20iz%20fizike%20ucenika%20srednjih%20skola%20-%202023.pdf"><img
-                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"> <b>Календар такмичења 2022</b> </td>
-                        <td>
-                            <a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Kalendar_takmicenja_2022.pdf"><img
-                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"> <b>Наставни програм такмичења Алфа и Бета категорије</b> </td>
-                        <td>
-                            <a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/PlanTakmicenja2021.pdf"><img
-                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"> <b>Наставни програм такмичења Гама категорије</b> </td>
-                        <td>
-                            <a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Gama%20program%20-%202024.pdf"><img
-                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"> <b>ИЗЈАВА - лични подаци</b> </td>
-                        <td>
-                            <a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Izjava%202024.pdf"><img
-                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"> <b>Извештај са такмичења Алфа и Бета</b> </td>
-                        <td>
-                            <a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Izvestaj-sa-takmicenja-2024%20AB.xlsx"><img
-                                    src="{{ url_for('static', filename='images/icons8-excel.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"> <b>Извештај са такмичења Гама категорија</b> </td>
-                        <td>
-                            <a class="link-with-pdf-icon"
-                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Izvestaj-sa-takmicenja-2024%20Gama.xlsx"><img
-                                    src="{{ url_for('static', filename='images/icons8-excel.svg') }}" alt=""></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"><b>Задаци
-                                са претходних такмичења</b></td>
-                        <td><a class="link-with-pdf-icon"
-                                href="https://drive.google.com/drive/folders/1-VdVYddOYK-NjW9OgsWzxLs7Cw54bq0B?usp=sharing"><img
-                                    src="/static/images/new-logo-drive-google.svg" alt=""></a></td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"><b>Такмичења ранијих
-                                година</b></td>
-                        <td><a class="link-with-pdf-icon" href="http://takmicenja.ipb.ac.rs/"><img
-                                    src="/static/images/icons8-chrome.svg" alt=""></a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<!-- Vazna dokumenta -->
 
 <!-- Najnovije -->
 <div class="container-fluid">
@@ -250,8 +162,8 @@
                 <h1>Задаци и решења</h1>
             </div>
         </div>
-        <div class="row justify-content-md-center text-center" id="takmicenja">
-            <div class="col-md-3 text-center mx-auto"
+        <div class="row justify-content-md-center text-center " id="takmicenja">
+            <div class="col-md-3 text-center mx-auto rounded"
                 style="background-color: #c94d65; color: black; padding: 2rem; margin: 1rem;">
                 <h4 style="padding-bottom: 1rem;">Такмичење 2023</h4>
                 <ul style="list-style-type:none; padding-left:0;" id="main_linkovi_pillshaped2">
@@ -262,7 +174,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3 text-center mx-auto"
+            <div class="col-md-3 text-center mx-auto rounded"
                 style="background-color: #c94d65; color: black; padding: 2rem; margin: 1rem;">
                 <h4 style="padding-bottom: 1rem;">Такмичење 2022</h4>
                 <ul style="list-style-type:none; padding-left:0;" id="main_linkovi_pillshaped2">
@@ -273,7 +185,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3 text-center mx-auto"
+            <div class="col-md-3 text-center mx-auto rounded"
                 style="background-color: #c94d65; color: black; padding: 2rem; margin: 1rem;">
                 <h4 style="padding-bottom: 1rem;">Такмичење 2021</h4>
                 <ul style="list-style-type:none; padding-left:0;" id="main_linkovi_pillshaped2">

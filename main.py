@@ -50,4 +50,9 @@ def vesti2():
 def vesti3():
     return render_template('/vesti3.html')
 
+@app.route('/pravilnici-o-takmicenjima')
+def pravila():
+    return render_template('vazna_dokumenta.html')
+
+
 app.run(debug=True, host='0.0.0.0')

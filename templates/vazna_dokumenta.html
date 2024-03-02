@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+{% block title %}Почетна страна{% endblock title %}
+{% block content %}
+<!-- Vazna dokumenta -->
+<div class="container" style="padding-top: 2rem;">
+    <div class="row text-center">
+        <div class="col">
+            <h1>Важна документа:</h1>
+        </div>
+    </div>
+    <div class="row" style="padding: 2rem; align-items: center; justify-content: center;">
+        <div class="col col-md-6">
+            <table class="table table-hover table-bordered table-responsive">
+                <tbody>
+                    <tr>
+                        <td class="align-middle"> <b>Правилник такмичења</b> </td>
+                        <td><a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Pravilnik%20o%20takmicenjima%20iz%20fizike%20ucenika%20srednjih%20skola%20-%202023.pdf"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"> <b>Календар такмичења 2022</b> </td>
+                        <td>
+                            <a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Kalendar_takmicenja_2022.pdf"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"> <b>Наставни програм такмичења Алфа и Бета категорије</b> </td>
+                        <td>
+                            <a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/PlanTakmicenja2021.pdf"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"> <b>Наставни програм такмичења Гама категорије</b> </td>
+                        <td>
+                            <a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Gama%20program%20-%202024.pdf"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"> <b>ИЗЈАВА - лични подаци</b> </td>
+                        <td>
+                            <a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Izjava%202024.pdf"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"> <b>Извештај са такмичења Алфа и Бета</b> </td>
+                        <td>
+                            <a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Izvestaj-sa-takmicenja-2024%20AB.xlsx"><img
+                                    src="{{ url_for('static', filename='images/icons8-excel.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"> <b>Извештај са такмичења Гама категорија</b> </td>
+                        <td>
+                            <a class="link-with-pdf-icon"
+                                href="https://www.df.uns.ac.rs/takmicenjefizikasrednje/Documents/Opstinsko%2024/Izvestaj-sa-takmicenja-2024%20Gama.xlsx"><img
+                                    src="{{ url_for('static', filename='images/icons8-excel.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><b>Задаци
+                                са претходних такмичења</b></td>
+                        <td><a class="link-with-pdf-icon"
+                                href="https://drive.google.com/drive/folders/1-VdVYddOYK-NjW9OgsWzxLs7Cw54bq0B?usp=sharing"><img
+                                    src="/static/images/new-logo-drive-google.svg" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><b>Такмичења ранијих
+                                година</b></td>
+                        <td><a class="link-with-pdf-icon" href="http://takmicenja.ipb.ac.rs/"><img
+                                    src="/static/images/icons8-chrome.svg" alt=""></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Vazna dokumenta -->
+{% endblock content %}
