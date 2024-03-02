@@ -34,7 +34,6 @@
   background-color: #343a40; /* Boja pozadine dropdown menija */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Senka */
   z-index: 1;
-  left: 0 !important; /* Dodajte !important kako biste osigurali primenu ove vrednosti */
 }
 
 /* Stilizacija linkova u dropdown meniju */
@@ -372,5 +371,31 @@
 
   #container-naslovna {
     height: auto !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    width: auto;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+  }
+
+  .nav-item-dropdown {
+    display: block !important;
+  }
+  .nav-item-dropdown:hover .dropdown-menu {
+    position: static !important;
+    display: block !important;
+    margin-top: 0 !important;
   }
 }
