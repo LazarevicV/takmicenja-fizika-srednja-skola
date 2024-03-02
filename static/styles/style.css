@@ -23,13 +23,53 @@
   font-size: 20px;
 }
 
-.navbar-letters li {
-  width: auto;
-  padding-right: 1em;
+.nav-item-dropdown {
+  position: relative;
 }
 
-.navbar li a {
+/* Stilizacija dropdown menija */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #343a40; /* Boja pozadine dropdown menija */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Senka */
+  z-index: 1;
+}
+
+/* Stilizacija linkova u dropdown meniju */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer; /* Dodali smo stil da pokazivač miša bude kao ruka (kursor) */
+}
+
+/* Prikazivanje dropdown menija kada se hoveruje na .nav-item-dropdown */
+.nav-item-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Boja linkova u dropdown meniju kada se hoveruje */
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+/* Boja teksta linkova u dropdown meniju */
+.navbar-letters li a, .dropdown-item {
   color: white;
+  text-decoration: none; /* Dodato da se ukloni podvučenost linkova u dropdown meniju */
+  display: block; /* Prikazuje link kao blok element, zauzima celu širinu roditeljskog reda */
+}
+
+/* Stilizacija aktivnog linka u dropdown meniju */
+.dropdown-item.active {
+  background-color: #007bff; /* Boja aktivnog linka */
+}
+
+.nav-link.active {
+  color: #fff;
+  /* Postavite boju teksta prema potrebi */
+  font-weight: bold;
+  /* Dodajte druge stilove prema potrebi */
+  text-shadow: 0 0 5px lightblue;
 }
 
 /* @media only screen and (max-width: 765px) {
@@ -212,14 +252,6 @@
   /* Podesite veličinu fonta prema potrebi */
   margin-bottom: 10px;
   /* Podesite razmak između linkova prema potrebi */
-}
-
-.nav-link.active {
-  color: #fff;
-  /* Postavite boju teksta prema potrebi */
-  font-weight: bold;
-  /* Dodajte druge stilove prema potrebi */
-  text-shadow: 0 0 5px lightblue;
 }
 
 #card-vesti h3 {
