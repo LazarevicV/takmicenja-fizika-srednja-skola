@@ -34,6 +34,7 @@
   background-color: #343a40; /* Boja pozadine dropdown menija */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Senka */
   z-index: 1;
+  left: 0 !important; /* Dodajte !important kako biste osigurali primenu ove vrednosti */
 }
 
 /* Stilizacija linkova u dropdown meniju */
@@ -71,6 +72,7 @@
   /* Dodajte druge stilove prema potrebi */
   text-shadow: 0 0 5px lightblue;
 }
+
 
 /* @media only screen and (max-width: 765px) {
     body {
