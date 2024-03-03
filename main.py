@@ -111,11 +111,29 @@ def opstinsko_zadaci():
             godine.append(trenutno[1])
     godine.sort(reverse=True)
     prave_godine = []
+
+    alfa_opstinsko = []
+    beta_opstinsko = []
+    ostalo_opstinsko = []
+
+    for o in opstinsko_fajlovi:
+        if 'BETA' in o['name'] or 'beta' in o['name']:
+            beta_opstinsko.append(o)
+        elif 'ALFA' in o['name'] or 'alfa' in o['name']:
+            alfa_opstinsko.append(o)
+        else:
+            ostalo_opstinsko.append(o)
+
     for i in range(6):
         prave_godine.append(godine[i])
+
+    alfa_opstinsko = sorted(alfa_opstinsko, key=lambda x: x['name'])
+    beta_opstinsko = sorted(beta_opstinsko, key=lambda x: x['name'])
+    ostalo_opstinsko = sorted(ostalo_opstinsko, key=lambda x: x['name'])
+    
     
             
-    return render_template('opstinsko_zadaci.html', godine=prave_godine, opstinsko=opstinsko_fajlovi)
+    return render_template('opstinsko_zadaci.html', godine=prave_godine, opstinsko=opstinsko_fajlovi, alfa=alfa_opstinsko, beta=beta_opstinsko, ostalo = ostalo_opstinsko)
 
 @app.route('/drzavno_zadaci')
 def drzavno_zadaci():
@@ -128,16 +146,29 @@ def drzavno_zadaci():
             godine.append(trenutno[1])
     godine.sort(reverse=True)
     prave_godine = []
-    n = len(drzavno_fajlovi)
-    if (n < 6):
-        for i in range(n):
-            prave_godine.append(godine[i])
-    else:
-        for i in range(6):
-            prave_godine.append(godine[i])
+
+    alfa_drzavno = []
+    beta_drzavno = []
+    ostalo_drzavno = []
+
+    for o in drzavno_fajlovi:
+        if 'BETA' in o['name'] or 'beta' in o['name']:
+            beta_drzavno.append(o)
+        elif 'ALFA' in o['name'] or 'alfa' in o['name']:
+            alfa_drzavno.append(o)
+        else:
+            ostalo_drzavno.append(o)
+
+    for i in range(6):
+        prave_godine.append(godine[i])
+
+    alfa_drzavno = sorted(alfa_drzavno, key=lambda x: x['name'])
+    beta_drzavno = sorted(beta_drzavno, key=lambda x: x['name'])
+    ostalo_drzavno = sorted(ostalo_drzavno, key=lambda x: x['name'])
+    
     
             
-    return render_template('drzavno_zadaci.html', godine=prave_godine, drzavno=drzavno_fajlovi)
+    return render_template('drzavno_zadaci.html', godine=prave_godine, opstinsko=opstinsko_fajlovi, alfa=alfa_drzavno, beta=beta_drzavno, ostalo = ostalo_drzavno)
 
 @app.route('/okruzno_zadaci')
 def okruzno_zadaci():
@@ -150,16 +181,29 @@ def okruzno_zadaci():
             godine.append(trenutno[1])
     godine.sort(reverse=True)
     prave_godine = []
-    n = len(okruzno_fajlovi)
-    if (n < 6):
-        for i in range(n):
-            prave_godine.append(godine[i])
-    else:
-        for i in range(6):
-            prave_godine.append(godine[i])
+
+    alfa_okruzno = []
+    beta_okruzno = []
+    ostalo_okruzno = []
+
+    for o in okruzno_fajlovi:
+        if 'BETA' in o['name'] or 'beta' in o['name']:
+            beta_okruzno.append(o)
+        elif 'ALFA' in o['name'] or 'alfa' in o['name']:
+            alfa_okruzno.append(o)
+        else:
+            ostalo_okruzno.append(o)
+
+    for i in range(6):
+        prave_godine.append(godine[i])
+
+    alfa_okruzno = sorted(alfa_okruzno, key=lambda x: x['name'])
+    beta_okruzno = sorted(beta_okruzno, key=lambda x: x['name'])
+    ostalo_okruzno = sorted(ostalo_okruzno, key=lambda x: x['name'])
+    
     
             
-    return render_template('okruzno_zadaci.html', godine=prave_godine, okruzno=okruzno_fajlovi)
+    return render_template('okruzno_zadaci.html', godine=prave_godine, opstinsko=opstinsko_fajlovi, alfa=alfa_okruzno, beta=beta_okruzno, ostalo = ostalo_okruzno)
 
 # print(opstinsko_fajlovi)
 # print('*' *50)

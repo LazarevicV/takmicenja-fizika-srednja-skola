@@ -31,6 +31,10 @@
     border-radius: 10px;
   }
 
+  .spoji_alfa_beta_ostalo {
+    display: flex !important;
+  }
+
   
 
 .contestants-images img{

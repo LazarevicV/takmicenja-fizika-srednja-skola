@@ -4,25 +4,77 @@
 
 
 <div class="container" style="padding: 2rem 0 2rem 0;">
+
+    <h1 class="text-center">Окружно такмичење - задаци</h1>
     {% for godina in godine %}
-    <h1></h1>
     <div class="container text-center">
-        <h1 id="opstinsko-{{godina}}">{{godina}}</h1>
+        <h1 id="okruzno-{{godina}}">{{godina}}</h1>
     </div>
     <div class="container" style="padding: 2rem; display: flex; align-items: center; justify-content: center;">
         <div class="col-md-6">
             <table class="table table-hover">
-                <tbody>
-                    {% for o in okruzno %}
-                    {% if godina in o['name'] %}
-                    <tr class="">
-                        <td>{{o['name']}}</td>
+                <thead>
+                    <tr>
 
-                        <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{o['link']}}"><img
-                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a></td>
                     </tr>
-                    {% endif %}
-                    {% endfor %}
+                </thead>
+                <tbody>
+                    <div class="spoji_alfa_beta_ostalo">
+                        <div class="alfa">
+                            <tr>
+                                <td>
+                                    <h1>ALFA</h1>
+                                </td>
+                            </tr>
+                            {% for a in alfa %}
+                            {% if godina in a['name'] %}
+                            <tr class="">
+                                <td>{{a['name']}}</td>
+
+                                <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{a['link']}}"><img
+                                            src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="beta">
+                            <tr>
+                                <td>
+                                    <h1>BETA</h1>
+                                </td>
+                            </tr>
+                            {% for b in beta %}
+                            {% if godina in b['name'] %}
+                            <tr class="">
+                                <td>{{b['name']}}</td>
+
+                                <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{b['link']}}"><img
+                                            src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="ostalo">
+                            <tr>
+                                <td>
+                                    <h1>OSTALO</h1>
+                                </td>
+                            </tr>
+                            {% for o in ostalo %}
+                            {% if godina in o['name'] %}
+                            <tr class="">
+                                <td>{{o['name']}}</td>
+
+                                <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{o['link']}}"><img
+                                            src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
                 </tbody>
             </table>
         </div>
