@@ -203,7 +203,7 @@ def okruzno_zadaci():
     
     
             
-    return render_template('okruzno_zadaci.html', godine=prave_godine, opstinsko=opstinsko_fajlovi, alfa=alfa_okruzno, beta=beta_okruzno, ostalo = ostalo_okruzno)
+    return render_template('okruzno_zadaci.html', godine=godine, opstinsko=opstinsko_fajlovi, alfa=alfa_okruzno, beta=beta_okruzno, ostalo = ostalo_okruzno)
 
 # print(opstinsko_fajlovi)
 # print('*' *50)

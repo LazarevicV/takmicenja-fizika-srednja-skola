@@ -6,6 +6,11 @@
 <div class="container" style="padding: 2rem 0 2rem 0;">
 
     <h1 class="text-center">Државно такмичење - задаци</h1>
+
+    <div class="container">
+        <a href="#gama-drzavno">Гама државно</a>
+    </div>
+
     {% for godina in godine %}
     <div class="container text-center">
         <h1 id="drzavno-{{godina}}">{{godina}}</h1>
@@ -80,6 +85,120 @@
         </div>
     </div>
     {% endfor %}
+
+    <div id="gama-drzavno">
+        <div class="container" style="padding: 2rem; display: flex; align-items: center; justify-content: center;">
+            <div class="col-md-6">
+                <h1 class="text-center">Гама</h1>
+                <table class="table table-hover">
+                    <tbody>
+                        <!-- 2023 -->
+                        <tr>
+                            <th>
+                                <h1>2023</h1>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2023. 1.razred - sa resenjima.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1c3qYXFerNkgekV8WKK_OJwlUxEsjSrGm/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2023. 2.razred - sa resenjima.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1c3wp4d3K6U55DEM3Au6_43TphvaDKRgM/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2023. 3.razred - sa resenjima.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1c3v9idajVr4eBVyDTfD6sE4GFQnFnPyf/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2023. 4.razred - sa resenjima.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1c2uqxQsrGr8JUMicujLXurgSKQj8tFJM/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+
+                        <!-- 2023 -->
+
+                        <!-- 2022 -->
+
+                        <tr>
+                            <th>
+                                <h1>2022</h1>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2022. 1.razred.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bt9XuAfbxDLh0bGYNGTrh89SOFNsZQHh/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2022. 2.razred.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bsi_T8na4zWO5Zyk0wmOGN_gYEKRTjgs/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno 2022. 3.razred.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bssqQ66usw3a1jGkKg0NTwaLIclJ1gSx/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+
+                        <!-- 2022 -->
+
+
+                        <!-- 2021 -->
+
+                        <tr>
+                            <th>
+                                <h1>2021</h1>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno2021_1_GAMA Raz.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bl3FAb16wBJfam4pzOh_fe9x0OODOPIk/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drzavno2021_2_GAMA Raz.pdf
+                            </td>
+                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bknOXes4zp2PYsDVRM91MCVz6NDf4FIu/view?usp=drive_link
+                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+
+                        <!-- 2021 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 {% endblock content %}
