@@ -27,13 +27,29 @@ folders = list_files(DRIVE_FOLDER_ID)
 opstinsko_fajlovi = []
 okruzno_fajlovi = []
 drzavno_fajlovi = []
+gama_fajlovi = []
+# Prvo pronađite ID foldera pod nazivom "GAMA kategorija"
+gama_folder_id = None
+for folder in folders:
+    if folder['mimeType'] == 'application/vnd.google-apps.folder' and 'GAMA kategorija' in folder['name']:
+        gama_folder_id = folder['id']
+        break
 
+# Ako je pronađen folder, nastavite sa listanjem fajlova unutar njega
+if gama_folder_id:
+    gama_files = list_files(gama_folder_id)
+    
+    for file in gama_files:
+        if file['mimeType'] == 'application/pdf':
+            file_name = file['name']
+            file_link = file['webViewLink']
+            gama_fajlovi.append({'name': file_name, 'link': file_link})
+
+# Nastavite sa pretragom ostalih fajlova
 for folder in folders:
     if folder['mimeType'] == 'application/vnd.google-apps.folder':
         subfolder_id = folder['id']
         subfolder_name = folder['name']
-
-        # print(f"Exploring subfolder: {subfolder_name}")
 
         # List files in the subfolder
         files_in_subfolder = list_files(subfolder_id)
@@ -43,12 +59,14 @@ for folder in folders:
                 file_name = file['name']
                 file_link = file['webViewLink']
                 if 'opstinsko' in file_name:
-                    opstinsko_fajlovi.append({'name': file_name, 'link':file_link})
+                    opstinsko_fajlovi.append({'name': file_name, 'link': file_link})
                 elif 'republicko' in file_name:
-                    drzavno_fajlovi.append({'name': file_name, 'link':file_link})
+                    drzavno_fajlovi.append({'name': file_name, 'link': file_link})
                 elif 'okruzno' in file_name:
-                    okruzno_fajlovi.append({'name': file_name, 'link':file_link})
-                # print(f"PDF File Name: {file_name}, Link: {file_link}")
+                    okruzno_fajlovi.append({'name': file_name, 'link': file_link})
+
+# Nastavite sa vašim postojećim kodom...
+
 
 app = Flask(__name__)
 
@@ -105,15 +123,16 @@ def opstinsko_zadaci():
     godine = []
     for o in opstinsko_fajlovi:
         trenutno = o['name'].split('_')
-        if (len(trenutno[0])>2 and trenutno[0] not in godine): #or (len(trenutno[1])>2 and trenutno[1] not in godine):
+        if (len(trenutno[0]) > 2 and trenutno[0] not in godine): 
             godine.append(trenutno[0])
-        elif (len(trenutno[1])>2 and trenutno[1] not in godine):
+        elif (len(trenutno[1]) > 2 and trenutno[1] not in godine):
             godine.append(trenutno[1])
     godine.sort(reverse=True)
     prave_godine = []
 
     alfa_opstinsko = []
     beta_opstinsko = []
+    gama_opstinsko = []  # Dodajte gama kategoriju
     ostalo_opstinsko = []
 
     for o in opstinsko_fajlovi:
@@ -124,16 +143,18 @@ def opstinsko_zadaci():
         else:
             ostalo_opstinsko.append(o)
 
+    for gama_file in gama_fajlovi:
+        gama_opstinsko.append(gama_file)
+
     for i in range(6):
         prave_godine.append(godine[i])
 
     alfa_opstinsko = sorted(alfa_opstinsko, key=lambda x: x['name'])
     beta_opstinsko = sorted(beta_opstinsko, key=lambda x: x['name'])
+    gama_opstinsko = sorted(gama_opstinsko, key=lambda x: x['name'])
     ostalo_opstinsko = sorted(ostalo_opstinsko, key=lambda x: x['name'])
-    
-    
-            
-    return render_template('opstinsko_zadaci.html', godine=prave_godine, opstinsko=opstinsko_fajlovi, alfa=alfa_opstinsko, beta=beta_opstinsko, ostalo = ostalo_opstinsko)
+
+    return render_template('opstinsko_zadaci.html', godine=prave_godine, alfa=alfa_opstinsko, beta=beta_opstinsko, gama=gama_opstinsko, ostalo=ostalo_opstinsko)
 
 @app.route('/drzavno_zadaci')
 def drzavno_zadaci():

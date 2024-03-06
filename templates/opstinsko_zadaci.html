@@ -2,7 +2,6 @@
 {% block title %}Општинско задаци{% endblock title %}
 {% block content %}
 
-
 <div class="container" style="padding: 2rem 0 2rem 0;">
 
     <h1 class="text-center">Општинско такмичење - задаци</h1>
@@ -18,179 +17,74 @@
     <div class="container" style="padding: 2rem; display: flex; align-items: center; justify-content: center;">
         <div class="col-md-6">
             <table class="table table-hover align-middle">
-                <thead>
-                    <tr>
-
-                    </tr>
-                </thead>
                 <tbody>
-                    <div class="spoji_alfa_beta_ostalo">
-                        <div class="alfa">
-                            <tr>
-                                <td>
-                                    <h1>Алфа</h1>
-                                </td>
-                            </tr>
-                            {% for a in alfa %}
-                            {% if godina in a['name'] %}
-                            <tr class="">
-                                <td>{{a['name']}}</td>
+                    <tr>
+                        <td colspan="2">
+                            <h1>Алфа</h1>
+                        </td>
+                    </tr>
+                    {% for a in alfa %}
+                    {% if godina in a['name'] %}
+                    <tr class="">
+                        <td>{{a['name']}}</td>
+                        <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{a['link']}}"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td colspan="2">
+                            <h1>Бета</h1>
+                        </td>
+                    </tr>
+                    {% for b in beta %}
+                    {% if godina in b['name'] %}
+                    <tr class="">
 
-                                <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{a['link']}}"><img
-                                            src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                                </td>
-                            </tr>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                        <div class="beta">
-                            <tr>
-                                <td>
-                                    <h1>Бета</h1>
-                                </td>
-                            </tr>
-                            {% for b in beta %}
-                            {% if godina in b['name'] %}
-                            <tr class="">
-                                <td>{{b['name']}}</td>
+                        <td>{{b['name']}}</td>
+                        <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{b['link']}}"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td colspan="2">
+                            <h1>Гама</h1>
+                        </td>
+                    </tr>
+                    {% for g in gama %}
+                    {% if godina in g['name'] %}
+                    <tr class="">
 
-                                <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{b['link']}}"><img
-                                            src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                                </td>
-                            </tr>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                        <div class="ostalo">
-                            <tr>
-                                <td>
-                                    <h1>Остало</h1>
-                                </td>
-                            </tr>
-                            {% for o in ostalo %}
-                            {% if godina in o['name'] %}
-                            <tr class="">
-                                <td>{{o['name']}}</td>
-
-                                <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{o['link']}}"><img
-                                            src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                                </td>
-                            </tr>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
+                        <td>{{g['name']}}</td>
+                        <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{g['link']}}"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td colspan="2">
+                            <h1>Остало</h1>
+                        </td>
+                    </tr>
+                    {% for o in ostalo %}
+                    {% if godina in o['name'] %}
+                    <tr class="">
+                        <td>{{o['name']}}</td>
+                        <td style="width: 10%;"><a class="link-with-pdf-icon" href="{{o['link']}}"><img
+                                    src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
     {% endfor %}
-    <div id="gama-opstinsko">
-        <div class="container" style="padding: 2rem; display: flex; align-items: center; justify-content: center;">
-            <div class="col-md-6">
-                <h1 class="text-center">Гама</h1>
-                <table class="table table-hover">
-                    <tbody>
-                        <!-- 2023 -->
-                        <tr>
-                            <th>
-                                <h1>2023</h1>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2023_1.Razred.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1byEW-huouWBpU9XfM7AsIbsnlzl5ixp-/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2023_2.Razred.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1byRiw8-bfeTcVzrO3jnQ7twJ_SNoKfT0/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2023_3.Razred.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bxfNRZupKEZbMceFfHy-WV90fJg9rdNW/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2023_4.Razred.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1byEvucCPzaxOvgcCJ8_IxLuwnq-1_z_K/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <!-- 2023 -->
-
-                        <!-- 2022 -->
-                        <tr>
-                            <th>
-                                <h1>2022</h1>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2022_1.Razred Gama.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bn5tmU56yaVW88Z7qlIw_0MBdSO62xD4/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2022_2.Razred Gama.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bmwpWdhFmgDiC1ZSL_ha2H4pxGiKa6hA/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Opstinsko2022_3.Razred Gama.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bnFd4tDs4oI8E4dP9eWOp6yZnzuBULoA/view?usp=drive_link
-                                    "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <!-- 2022 -->
-
-                        <!-- 2021 -->
-                        <tr>
-                            <th>
-                                <h1>2021</h1>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                IIOp2021Gama.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bcf5iEUx_LlZO0eBsFPGUWvAi4983V5Y/view?usp=drive_link
-                                "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                IOp2021Gama.pdf
-                            </td>
-                            <td style="width: 10%;"><a class="link-with-pdf-icon" href="https://drive.google.com/file/d/1bcyW4J9yEon-Xca5g40qqqYeSF3qINs3/view?usp=drive_link
-                                "><img src="{{ url_for('static', filename='images/pdf_icon.svg') }}" alt=""></a>
-                            </td>
-                        </tr>
-                        <!-- 2021 -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 </div>
 
 {% endblock content %}
