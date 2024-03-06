@@ -155,7 +155,9 @@ def opstinsko_zadaci():
             beta_opstinsko.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_opstinsko.append(o)
-        elif 'opstinsko' in o['name'].lower():  # Dodajte proveru za "opstinsko"
+        elif 'opstinsko' in o['name'].lower():
+            ostalo_opstinsko.append(o)
+        else:
             ostalo_opstinsko.append(o)
 
     for gama_file in gama_fajlovi:
@@ -195,7 +197,9 @@ def okruzno_zadaci():
             beta_okruzno.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_okruzno.append(o)
-        elif 'okruzno' in o['name'].lower() and 'gama' not in o['name'].lower():  # Dodajte proveru za "okruzno"
+        elif 'okruzno' in o['name'].lower():
+            ostalo_okruzno.append(o)
+        else:
             ostalo_okruzno.append(o)
 
     for gama_file in gama_fajlovi:
@@ -236,7 +240,7 @@ def drzavno_zadaci():
             beta_drzavno.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_drzavno.append(o)
-        elif 'okruzno' in o['name'].lower():
+        elif 'drzavno' in o['name'].lower():
             ostalo_drzavno.append(o)
         else:
             ostalo_drzavno.append(o)
