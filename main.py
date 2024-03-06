@@ -140,11 +140,12 @@ def opstinsko_zadaci():
             beta_opstinsko.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_opstinsko.append(o)
-        else:
+        elif 'opstinsko' in o['name'].lower():  # Dodajte proveru za "opstinsko"
             ostalo_opstinsko.append(o)
 
     for gama_file in gama_fajlovi:
-        gama_opstinsko.append(gama_file)
+        if 'opstinsko' in gama_file['name'].lower():  # Dodajte proveru za "opstinsko"
+            gama_opstinsko.append(gama_file)
 
     for i in range(6):
         prave_godine.append(godine[i])
@@ -156,43 +157,6 @@ def opstinsko_zadaci():
 
     return render_template('opstinsko_zadaci.html', godine=prave_godine, alfa=alfa_opstinsko, beta=beta_opstinsko, gama=gama_opstinsko, ostalo=ostalo_opstinsko)
 
-@app.route('/drzavno_zadaci')
-def drzavno_zadaci():
-    godine = []
-    for o in drzavno_fajlovi:
-        trenutno = o['name'].split('_')
-        if (len(trenutno[0]) > 2 and trenutno[0] not in godine): 
-            godine.append(trenutno[0])
-        elif (len(trenutno[1]) > 2 and trenutno[1] not in godine):
-            godine.append(trenutno[1])
-    godine.sort(reverse=True)
-    prave_godine = []
-
-    alfa_drzavno = []
-    beta_drzavno = []
-    gama_drzavno = []  # Dodajte gama kategoriju
-    ostalo_drzavno = []
-
-    for o in drzavno_fajlovi:
-        if 'BETA' in o['name'] or 'beta' in o['name'] or 'Beta' in o['name']:
-            beta_drzavno.append(o)
-        elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
-            alfa_drzavno.append(o)
-        else:
-            ostalo_drzavno.append(o)
-
-    for gama_file in gama_fajlovi:
-        gama_drzavno.append(gama_file)
-
-    for i in range(6):
-        prave_godine.append(godine[i])
-
-    alfa_drzavno = sorted(alfa_drzavno, key=lambda x: x['name'])
-    beta_drzavno = sorted(beta_drzavno, key=lambda x: x['name'])
-    gama_drzavno = sorted(gama_drzavno, key=lambda x: x['name'])
-    ostalo_drzavno = sorted(ostalo_drzavno, key=lambda x: x['name'])
-
-    return render_template('drzavno_zadaci.html', godine=prave_godine, alfa=alfa_drzavno, beta=beta_drzavno, gama=gama_drzavno, ostalo=ostalo_drzavno)
 
 @app.route('/okruzno_zadaci')
 def okruzno_zadaci():
@@ -216,11 +180,12 @@ def okruzno_zadaci():
             beta_okruzno.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_okruzno.append(o)
-        else:
+        elif 'okruzno' in o['name'].lower():  # Dodajte proveru za "okruzno"
             ostalo_okruzno.append(o)
 
     for gama_file in gama_fajlovi:
-        gama_okruzno.append(gama_file)
+        if 'okruzno' in gama_file['name'].lower():  # Dodajte proveru za "okruzno"
+            gama_okruzno.append(gama_file)
 
     for i in range(6):
         prave_godine.append(godine[i])
@@ -232,9 +197,50 @@ def okruzno_zadaci():
 
     return render_template('okruzno_zadaci.html', godine=prave_godine, alfa=alfa_okruzno, beta=beta_okruzno, gama=gama_okruzno, ostalo=ostalo_okruzno)
 
+
+
+@app.route('/drzavno_zadaci')
+def drzavno_zadaci():
+    godine = []
+    for o in drzavno_fajlovi:
+        trenutno = o['name'].split('_')
+        if (len(trenutno[0]) > 2 and trenutno[0] not in godine): 
+            godine.append(trenutno[0])
+        elif (len(trenutno[1]) > 2 and trenutno[1] not in godine):
+            godine.append(trenutno[1])
+    godine.sort(reverse=True)
+    prave_godine = []
+
+    alfa_drzavno = []
+    beta_drzavno = []
+    gama_drzavno = []  # Dodajte gama kategoriju
+    ostalo_drzavno = []
+
+    for o in drzavno_fajlovi:
+        if 'BETA' in o['name'] or 'beta' in o['name'] or 'Beta' in o['name']:
+            beta_drzavno.append(o)
+        elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
+            alfa_drzavno.append(o)
+        elif 'drzavno' in o['name'].lower():  # Dodajte proveru za "drzavno"
+            ostalo_drzavno.append(o)
+
+    for gama_file in gama_fajlovi:
+        if 'drzavno' in gama_file['name'].lower():  # Dodajte proveru za "drzavno"
+            gama_drzavno.append(gama_file)
+
+    for i in range(6):
+        prave_godine.append(godine[i])
+
+    alfa_drzavno = sorted(alfa_drzavno, key=lambda x: x['name'])
+    beta_drzavno = sorted(beta_drzavno, key=lambda x: x['name'])
+    gama_drzavno = sorted(gama_drzavno, key=lambda x: x['name'])
+    ostalo_drzavno = sorted(ostalo_drzavno, key=lambda x: x['name'])
+
+    return render_template('drzavno_zadaci.html', godine=prave_godine, alfa=alfa_drzavno, beta=beta_drzavno, gama=gama_drzavno, ostalo=ostalo_drzavno)
+
 # print(opstinsko_fajlovi)
 # print('*' *50)
 # print(drzavno_fajlovi)
-print(len(okruzno_fajlovi))
+# print(len(okruzno_fajlovi))
 
 app.run(debug=True, host='0.0.0.0')
