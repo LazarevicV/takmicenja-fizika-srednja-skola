@@ -24,6 +24,9 @@ def list_files(folder_id):
 
 folders = list_files(DRIVE_FOLDER_ID)
 
+# for folder in folders:
+#     print(f"Folder Name: {folder['name']}, Folder ID: {folder['id']}")
+
 opstinsko_fajlovi = []
 okruzno_fajlovi = []
 drzavno_fajlovi = []
@@ -58,12 +61,24 @@ for folder in folders:
             if file['mimeType'] == 'application/pdf':
                 file_name = file['name']
                 file_link = file['webViewLink']
-                if 'opstinsko' in file_name:
-                    opstinsko_fajlovi.append({'name': file_name, 'link': file_link})
-                elif 'republicko' in file_name:
-                    drzavno_fajlovi.append({'name': file_name, 'link': file_link})
-                elif 'okruzno' in file_name:
-                    okruzno_fajlovi.append({'name': file_name, 'link': file_link})
+                
+                # Extract year from the file name using a more robust method
+                try:
+                    year = int(file_name.split('_')[0])
+                except ValueError:
+                    year = 0  # Handle cases where the year is not an integer
+                
+                if 2017 <= year <= 2023:  # Adjust the range based on your needs
+                    if 'opstinsko' in file_name:
+                        opstinsko_fajlovi.append({'name': file_name, 'link': file_link})
+                    elif 'republicko' in file_name:
+                        drzavno_fajlovi.append({'name': file_name, 'link': file_link})
+                    elif 'okruzno' in file_name:
+                        okruzno_fajlovi.append({'name': file_name, 'link': file_link})
+                    else:
+                        # Files with names not matching specific categories go to "Ostalo" for "Drzavno"
+                        ostalo_file = {'name': file_name, 'link': file_link}
+                        drzavno_fajlovi.append(ostalo_file)
 
 # Nastavite sa vašim postojećim kodom...
 
@@ -180,7 +195,7 @@ def okruzno_zadaci():
             beta_okruzno.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_okruzno.append(o)
-        elif 'okruzno' in o['name'].lower():  # Dodajte proveru za "okruzno"
+        elif 'okruzno' in o['name'].lower() and 'gama' not in o['name'].lower():  # Dodajte proveru za "okruzno"
             ostalo_okruzno.append(o)
 
     for gama_file in gama_fajlovi:
@@ -221,7 +236,9 @@ def drzavno_zadaci():
             beta_drzavno.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_drzavno.append(o)
-        elif 'drzavno' in o['name'].lower():  # Dodajte proveru za "drzavno"
+        elif 'okruzno' in o['name'].lower():
+            ostalo_drzavno.append(o)
+        else:
             ostalo_drzavno.append(o)
 
     for gama_file in gama_fajlovi:
