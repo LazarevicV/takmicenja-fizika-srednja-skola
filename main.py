@@ -197,14 +197,10 @@ def okruzno_zadaci():
             beta_okruzno.append(o)
         elif 'ALFA' in o['name'] or 'alfa' in o['name'] or 'Alfa' in o['name']:
             alfa_okruzno.append(o)
+        elif 'GAMA' in o['name'].upper() or 'gama' in o['name'].lower():
+            gama_okruzno.append(o)
         elif 'okruzno' in o['name'].lower():
             ostalo_okruzno.append(o)
-        else:
-            ostalo_okruzno.append(o)
-
-    for gama_file in gama_fajlovi:
-        if 'okruzno' in gama_file['name'].lower():  # Dodajte proveru za "okruzno"
-            gama_okruzno.append(gama_file)
 
     for i in range(6):
         prave_godine.append(godine[i])
