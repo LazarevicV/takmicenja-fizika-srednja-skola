@@ -80,8 +80,6 @@ for folder in folders:
                         ostalo_file = {'name': file_name, 'link': file_link}
                         drzavno_fajlovi.append(ostalo_file)
 
-# Nastavite sa vašim postojećim kodom...
-
 
 app = Flask(__name__)
 
@@ -91,7 +89,6 @@ def index():
 
 # @app.route('/test')
 # def test():
-    
 
 @app.route('/zadaci')
 def zadaci():
@@ -147,7 +144,7 @@ def opstinsko_zadaci():
 
     alfa_opstinsko = []
     beta_opstinsko = []
-    gama_opstinsko = []  # Dodajte gama kategoriju
+    gama_opstinsko = [] 
     ostalo_opstinsko = []
 
     for o in opstinsko_fajlovi:
@@ -161,7 +158,7 @@ def opstinsko_zadaci():
             ostalo_opstinsko.append(o)
 
     for gama_file in gama_fajlovi:
-        if 'opstinsko' in gama_file['name'].lower():  # Dodajte proveru za "opstinsko"
+        if 'opstinsko' in gama_file['name'].lower(): 
             gama_opstinsko.append(gama_file)
 
     for i in range(6):
@@ -189,7 +186,7 @@ def okruzno_zadaci():
 
     alfa_okruzno = []
     beta_okruzno = []
-    gama_okruzno = []  # Dodajte gama kategoriju
+    gama_okruzno = []
     ostalo_okruzno = []
 
     for o in okruzno_fajlovi:
@@ -228,7 +225,7 @@ def drzavno_zadaci():
 
     alfa_drzavno = []
     beta_drzavno = []
-    gama_drzavno = []  # Dodajte gama kategoriju
+    gama_drzavno = [] 
     ostalo_drzavno = []
 
     for o in drzavno_fajlovi:
@@ -242,7 +239,7 @@ def drzavno_zadaci():
             ostalo_drzavno.append(o)
 
     for gama_file in gama_fajlovi:
-        if 'drzavno' in gama_file['name'].lower():  # Dodajte proveru za "drzavno"
+        if 'drzavno' in gama_file['name'].lower():
             gama_drzavno.append(gama_file)
 
     for i in range(6):
